@@ -3,7 +3,9 @@ to: src/components/<%=title%>/index.js
 ---
 
 import React from 'react'
-import {Container} from "./Styled"
+
+/* components */
+import { Container } from "./Styled"
 
 
 const <%= h.capitalize(title) %> = () => {

@@ -5,12 +5,23 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Hjörtur Ingvi Jóhannsson`,
+    subtitle: `Pianist - Composer - Arranger`,
+    pages: [
+      { name: `News`, slug: `/news` },
+      { name: `Contact`, slug: `/contact` },
+      { name: `Hjörtur Ingvi Jóhannsson`, slug: `/` },
+      { name: `CV`, slug: `/cv` },
+      { name: `Projects`, slug: `/projects` },
+    ],
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `assets`,
-        path: `${__dirname}/static/assets`,
+        name: `images`,
+        path: `${__dirname}/static/assets/images`,
       },
     },
     {
@@ -38,5 +49,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
+    `gatsby-plugin-layout`,
   ],
 }

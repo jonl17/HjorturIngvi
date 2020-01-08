@@ -1,8 +1,11 @@
 import React from "react"
-import { Container } from "./Styled"
 import { connect } from "react-redux"
 import { setDevice } from "../state/action"
 import { GlobalStyle } from "../components/GlobalStyle"
+
+/** components */
+import { Container } from "./Styled"
+import Header from "../components/Header"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -24,6 +27,7 @@ class Layout extends React.Component {
     return (
       <Container>
         <GlobalStyle></GlobalStyle>
+        <Header></Header>
         {this.props.children}
       </Container>
     )
