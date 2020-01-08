@@ -34,8 +34,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `verkefni`,
-        path: `${__dirname}/static/verkefni`,
+        name: `about`,
+        path: `${__dirname}/static/about`,
       },
     },
     {

@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 
 /* components */
 import { Container, Item, Anchor } from "./Styled"

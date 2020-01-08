@@ -9,6 +9,8 @@ collections:
   - name: "about"
     label: "About"
     folder: "static/about"
+    editor:
+      preview: false
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
