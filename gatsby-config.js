@@ -15,6 +15,13 @@ module.exports = {
       { name: `CV`, slug: `/cv` },
       { name: `Projects`, slug: `/projects` },
     ],
+    mobilePages: [
+      { name: `Hjörtur Ingvi Jóhannsson`, slug: `/` },
+      { name: `News`, slug: `/news` },
+      { name: `Contact`, slug: `/contact` },
+      { name: `CV`, slug: `/cv` },
+      { name: `Projects`, slug: `/projects` },
+    ],
   },
   plugins: [
     {
