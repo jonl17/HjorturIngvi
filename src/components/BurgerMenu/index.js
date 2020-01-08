@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { triggerBurgerWindow } from "../../state/action"
 
 /* components */
 import { Container, Item, Anchor } from "./Styled"
@@ -14,11 +15,18 @@ const Burgermenu = ({
 }) => {
   const burgerWindow = useSelector(state => state.reducer.burgerWindow)
   const device = useSelector(state => state.reducer.device)
+  const dispatch = useDispatch()
   return (
     <Container height={burgerWindow === "open" ? "100%" : "0%"}>
       {mobilePages.map((item, index) => (
-        <Item device={device} key={index}>
-          <Anchor to={item.slug}>{item.name}</Anchor>
+        <Item head={index === 0 ? true : false} device={device} key={index}>
+          <Anchor
+            onClick={() => dispatch(triggerBurgerWindow("closed"))}
+            activeClassName="bold"
+            to={item.slug}
+          >
+            {item.name}
+          </Anchor>
         </Item>
       ))}
     </Container>

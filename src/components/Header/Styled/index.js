@@ -52,6 +52,14 @@ export const Item = styled.p`
   /* scaling */
   ${ItemScale}
 `
+
+const AnchorScale = css`
+  ${props =>
+    props.device === `mobile` &&
+    css`
+      opacity: 1;
+    `}
+`
 export const Anchor = styled(Link)`
   text-decoration: none;
   color: ${COLORS.black};
@@ -61,4 +69,5 @@ export const Anchor = styled(Link)`
   &&:hover {
     opacity: 1;
   }
+  ${AnchorScale}
 `

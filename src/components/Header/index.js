@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 
 /* components */
 import { Container, Item, Anchor } from "./Styled"
@@ -17,7 +17,7 @@ const Header = ({
     <Container device={device}>
       {pages.map((item, index) => (
         <Item device={device} home={item.name === title} key={index}>
-          <Anchor activeClassName="selected" to={item.slug}>
+          <Anchor device={device} activeClassName="selected" to={item.slug}>
             {item.name}
           </Anchor>
         </Item>

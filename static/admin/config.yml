@@ -6,11 +6,11 @@ public_folder: "images"
 
 # Verkefni
 collections:
-  - name: "verkefni"
-    label: "Verkefni"
-    folder: "static/verkefni"
+  - name: "about"
+    label: "About"
+    folder: "static/about"
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Lýsing", name: "lysing", widget: "text" }
-      - { label: "Forsíðu mynd", name: "forsidu-mynd", widget: "image" }
+      - { label: "Texti", name: "body", widget: "markdown" }
+      - { label: "Mynd", name: "forsidu-mynd", widget: "image" }
