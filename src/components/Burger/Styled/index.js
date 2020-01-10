@@ -24,7 +24,6 @@ export const Line = styled.span`
   ${props =>
     props.ex &&
     css`
-      background: white;
       ${props =>
         props.one &&
         css`

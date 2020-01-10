@@ -6,7 +6,8 @@ export const AboutContainer = styled.div`
   grid-template-columns: 1fr 1fr;
   /** browser width */
   width: 850px;
-  margin: 100px auto;
+  margin: auto;
+  padding-top: 100px;
 `
 export const Content = styled.div`
   p {

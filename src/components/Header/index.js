@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { useSelector } from "react-redux"
 
 /* components */
-import { Container, Item, Anchor } from "./Styled"
+import { Container, Anchor } from "./Styled"
 
 const Header = ({
   data: {
@@ -14,15 +14,20 @@ const Header = ({
 }) => {
   const device = useSelector(state => state.reducer.device)
   return (
-    <Container device={device}>
-      {pages.map((item, index) => (
-        <Item device={device} home={item.name === title} key={index}>
-          <Anchor device={device} activeClassName="selected" to={item.slug}>
+    <>
+      <Container columns={pages.length} device={device}>
+        {pages.map((item, index) => (
+          <Anchor
+            key={index}
+            device={device}
+            activeClassName="selected"
+            to={item.slug}
+          >
             {item.name}
           </Anchor>
-        </Item>
-      ))}
-    </Container>
+        ))}
+      </Container>
+    </>
   )
 }
 

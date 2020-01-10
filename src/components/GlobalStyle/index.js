@@ -19,13 +19,12 @@ export const GlobalStyle = createGlobalStyle`
     html, body {
         margin: 0;
         height: 100%;
-        background: white;
-        color: black;
     }
     .bold {
         font-family: Maison Neue Bd;
     }
     .selected { /** for links */
-        opacity: 1 !important;
+        background: black;
+        color: white !important;
     }
 `
