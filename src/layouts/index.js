@@ -7,7 +7,6 @@ import { GlobalStyle } from "../components/GlobalStyle"
 import { Container } from "./Styled"
 import Header from "../components/Header"
 import Burger from "../components/Burger"
-import BurgerMenu from "../components/BurgerMenu"
 
 class Layout extends React.Component {
   constructor(props) {

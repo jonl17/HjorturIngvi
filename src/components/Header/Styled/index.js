@@ -39,16 +39,29 @@ export const Anchor = styled(Link)`
   text-transform: uppercase;
   transition: 0.1s ease-in-out;
   box-sizing: border-box;
-  height: 125px;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 17px;
-  padding-top: 15px;
+  padding-top: 20px;
   &&:hover {
     opacity: 1;
     color: white;
     background: black;
   }
   ${AnchorScale}
+`
+
+export const Name = styled.p`
+  position: fixed;
+  left: 25px;
+  top: 0;
+  height: 100px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  font-size: 22.5px;
+  text-transform: uppercase;
+  padding-top: 10px;
 `
