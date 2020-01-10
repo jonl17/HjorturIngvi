@@ -17,12 +17,13 @@ const Burgermenu = ({
   const device = useSelector(state => state.reducer.device)
   const dispatch = useDispatch()
   return (
-    <Container height={burgerWindow === "open" ? "100%" : "0%"}>
+    <Container height={burgerWindow === "open" ? "100vh" : "0vh"}>
       {mobilePages.map((item, index) => (
         <Item head={index === 0 ? true : false} device={device} key={index}>
           <Anchor
+            className="bold"
             onClick={() => dispatch(triggerBurgerWindow("closed"))}
-            activeClassName="bold"
+            activeClassName="selected"
             to={item.slug}
           >
             {item.name}

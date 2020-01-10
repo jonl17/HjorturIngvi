@@ -17,13 +17,14 @@ export const Container = styled.div`
   }
 `
 export const Line = styled.span`
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: ${COLORS.black};
   transition: 0.2s ease-in-out;
   ${props =>
     props.ex &&
     css`
+      background: white;
       ${props =>
         props.one &&
         css`

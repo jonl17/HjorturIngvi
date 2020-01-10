@@ -6,7 +6,7 @@ export const Container = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background: white;
+  background: ${COLORS.black};
   height: ${props => props.height};
   width: 100%;
   transition: 0.2s ease-in-out;
@@ -24,7 +24,7 @@ const ItemScale = css`
       ${props =>
         props.head &&
         css`
-          font-size: 20px;
+          font-size: 22.5px;
         `}
     `}
 `
@@ -32,12 +32,14 @@ export const Item = styled.p`
   margin: 0;
   margin: auto;
   font-size: 20px;
+  width: 200px;
   /* scaling */
   ${ItemScale}
 `
 export const Anchor = styled(Link)`
   text-decoration: none;
-  color: ${COLORS.black};
+  color: white;
   text-transform: uppercase;
   transition: 0.2s ease-in-out;
+  opacity: 0.6;
 `

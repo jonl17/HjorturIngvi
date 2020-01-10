@@ -18,6 +18,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     html, body {
         margin: 0;
+        height: 100%;
+        background: white;
+        color: black;
     }
     .bold {
         font-family: Maison Neue Bd;

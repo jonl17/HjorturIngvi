@@ -34,6 +34,7 @@ const ItemScale = css`
     props.device === `mobile` &&
     css`
       margin: auto auto auto 25px;
+      width: 200px;
       ${props =>
         !props.home &&
         css`
@@ -44,10 +45,11 @@ const ItemScale = css`
 export const Item = styled.p`
   margin: 0;
   margin: auto;
+  font-size: 18.5px;
   ${props =>
     props.home &&
     css`
-      font-size: 20px;
+      font-size: 22.5px;
     `}
   /* scaling */
   ${ItemScale}

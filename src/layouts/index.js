@@ -28,7 +28,7 @@ class Layout extends React.Component {
   render() {
     const { device } = this.props
     return (
-      <Container>
+      <>
         <GlobalStyle></GlobalStyle>
         <Header></Header>
         {device === `mobile` ? (
@@ -39,8 +39,8 @@ class Layout extends React.Component {
         ) : (
           <></>
         )}
-        {this.props.children}
-      </Container>
+        <Container>{this.props.children}</Container>
+      </>
     )
   }
 }
