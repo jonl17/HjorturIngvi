@@ -5,9 +5,6 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         height: 100%;
     }
-    .bold {
-        font-family: Maison Neue Bd;
-    }
     #selected { /** for links */
         span {
             background: #323232;

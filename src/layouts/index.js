@@ -7,6 +7,7 @@ import { GlobalStyle } from "../components/GlobalStyle"
 import { Container } from "./Styled"
 import Header from "../components/Header"
 import Burger from "../components/Burger"
+import SEO from "../components/SEO"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -28,6 +29,7 @@ class Layout extends React.Component {
     const { device } = this.props
     return (
       <>
+        <SEO></SEO>
         <GlobalStyle></GlobalStyle>
         <Header></Header>
         {device === `mobile` ? (

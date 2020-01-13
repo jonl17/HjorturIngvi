@@ -30,6 +30,7 @@
     "netlify-cms-app": "^2.9.7",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
+    "react-helmet": "^5.2.1",
     "react-redux": "^7.1.1",
     "redux": "^4.0.4",
     "styled-components": "^4.4.0"
