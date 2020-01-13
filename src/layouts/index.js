@@ -26,7 +26,6 @@ class Layout extends React.Component {
   }
   render() {
     const { device } = this.props
-    console.log(device)
     return (
       <>
         <GlobalStyle></GlobalStyle>

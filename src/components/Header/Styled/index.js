@@ -20,7 +20,8 @@ export const Container = styled.div`
   top: 0;
   right: 150px;
   display: grid;
-  grid-template-columns: repeat(${props => props.columns}, 100px);
+  /* grid-template-columns: repeat(${props => props.columns}, 100px); */
+  grid-template-columns: repeat(5, 100px);
   box-sizing: border-box;
   /** scaling */
   ${ContainerScale}
