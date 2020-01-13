@@ -3,7 +3,12 @@ import { graphql, StaticQuery } from "gatsby"
 import { useSelector } from "react-redux"
 
 /* components */
-import { Container, Anchor, Name } from "./Styled"
+import { Container, Anchor, Name, BlackKey } from "./Styled"
+
+const isActive = ({ isCurrent }) => {
+  console.log(isCurrent)
+  return isCurrent ? { id: "selected" } : null
+}
 
 const Header = ({
   data: {
@@ -19,12 +24,13 @@ const Header = ({
       <Container columns={pages.length} device={device}>
         {pages.map((item, index) => (
           <Anchor
+            getProps={isActive}
             key={index}
             device={device}
-            activeClassName="selected"
             to={item.slug}
           >
             {item.name}
+            <BlackKey></BlackKey>
           </Anchor>
         ))}
       </Container>

@@ -18,7 +18,7 @@ const ContainerScale = css`
 export const Container = styled.div`
   position: fixed;
   top: 0;
-  right: 0;
+  right: 150px;
   display: grid;
   grid-template-columns: repeat(${props => props.columns}, 100px);
   box-sizing: border-box;
@@ -45,11 +45,6 @@ export const Anchor = styled(Link)`
   align-items: center;
   font-size: 17px;
   padding-top: 20px;
-  &&:hover {
-    opacity: 1;
-    color: white;
-    background: black;
-  }
   ${AnchorScale}
 `
 
@@ -64,4 +59,15 @@ export const Name = styled.p`
   font-size: 22.5px;
   text-transform: uppercase;
   padding-top: 10px;
+`
+export const BlackKey = styled.span`
+  position: absolute;
+  top: 0;
+  height: 45px;
+  width: 25px;
+  border-radius: 2.5px;
+  transition: 0.1s;
+  ${Anchor}:hover & {
+    background: ${COLORS.black};
+  }
 `

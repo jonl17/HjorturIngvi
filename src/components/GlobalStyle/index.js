@@ -23,8 +23,9 @@ export const GlobalStyle = createGlobalStyle`
     .bold {
         font-family: Maison Neue Bd;
     }
-    .selected { /** for links */
-        background: black;
-        color: white !important;
+    #selected { /** for links */
+        span {
+            background: #323232;
+        }
     }
 `
