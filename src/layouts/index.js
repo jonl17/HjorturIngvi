@@ -5,9 +5,9 @@ import { GlobalStyle } from "../components/GlobalStyle"
 
 /** components */
 import { Container } from "./Styled"
-import Header from "../components/Header"
 import Burger from "../components/Burger"
 import SEO from "../components/SEO"
+import Menu from "../components/Menu"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -26,19 +26,12 @@ class Layout extends React.Component {
     dispatch(setDevice(window.innerWidth))
   }
   render() {
-    const { device } = this.props
     return (
       <>
         <SEO></SEO>
         <GlobalStyle></GlobalStyle>
-        <Header></Header>
-        {device === `mobile` ? (
-          <>
-            <Burger></Burger>
-          </>
-        ) : (
-          <></>
-        )}
+        <Burger></Burger>
+        <Menu></Menu>
         <Container>{this.props.children}</Container>
       </>
     )

@@ -20,7 +20,7 @@ const Burger = () => {
   ) : (
     <Container onClick={() => dispatch(triggerBurgerWindow("closed"))}>
       <Line one ex></Line>
-      <Line two ex></Line>
+      <Line three ex></Line>
     </Container>
   )
 }

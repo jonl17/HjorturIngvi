@@ -16,11 +16,3 @@ export const Content = styled.div`
     margin: 0;
   }
 `
-export const ImageContainer = styled.div`
-  height: 400px;
-  width: 100%;
-`
-export const Image = styled(Img)`
-  height: 100%;
-  width: 100%;
-`

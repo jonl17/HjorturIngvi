@@ -7,7 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     }
     #selected { /** for links */
         span {
-            background: #323232;
+            background: black;
         }
+    }
+    .readText {
+        color: gray;
     }
 `

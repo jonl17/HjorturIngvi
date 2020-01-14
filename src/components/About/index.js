@@ -1,20 +1,15 @@
 import React from "react"
 
 /* components */
-import { AboutContainer, Content, ImageContainer, Image } from "./Styled"
+import { AboutContainer, Content } from "./Styled"
 
 const About = ({ aboutContent }) => {
   return (
     <AboutContainer>
       <Content
+        className="readText"
         dangerouslySetInnerHTML={{ __html: aboutContent.html }}
       ></Content>
-      <ImageContainer>
-        <Image
-          imgStyle={{ objectFit: "contain" }}
-          fluid={aboutContent.frontmatter.forsidu_mynd.childImageSharp.fluid}
-        ></Image>
-      </ImageContainer>
     </AboutContainer>
   )
 }
