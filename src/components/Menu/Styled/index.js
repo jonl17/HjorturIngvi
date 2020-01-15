@@ -28,6 +28,7 @@ export const Container = styled.div`
 export const Anchor = styled(Link)`
   text-decoration: none;
   color: black;
+  display: flex;
   &&:hover {
     color: white;
   }
@@ -38,3 +39,11 @@ export const Item = styled.p`
   display: inline-block;
   margin: 0;
 `
+export const ArrowImage = styled.img`
+  display: none;
+  height: 100%;
+  margin: auto;
+  padding-bottom: 10px;
+  padding-left: 25px;
+`
+export const ItemContainer = styled.div``

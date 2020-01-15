@@ -1,14 +1,14 @@
 @font-face {
-  font-family: Maison Neue Book;
-  src: url("./assets//MaisonNeue-Book.otf");
+  font-family: Custom Reg;
+  src: url("./assets/reg.otf");
 }
 @font-face {
-  font-family: Maison Neue Bd;
-  src: url("./assets/MaisonNeue-Bold.otf");
+  font-family: Custom Bold;
+  src: url("./assets/bold.otf");
 }
 * {
-  font-family: Maison Neue Book;
+  font-family: Custom Reg;
 }
 .selected {
-  font-family: Maison Neue Bd;
+  font-family: Custom Bold;
 }

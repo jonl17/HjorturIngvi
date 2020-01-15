@@ -2,9 +2,9 @@ import styled, { css } from "styled-components"
 import { COLORS } from "../../../constants"
 
 export const Container = styled.div`
-  height: 32px;
-  width: 32px;
-  position: absolute;
+  height: 36px;
+  width: 36px;
+  position: fixed;
   top: 40px;
   right: 40px;
   z-index: 6;
@@ -17,9 +17,9 @@ export const Container = styled.div`
   }
 `
 export const Line = styled.span`
-  height: 5px;
+  height: 4px;
   width: 100%;
-  background: ${COLORS.black};
+  background: black;
   transition: 0.2s ease-in-out;
   ${props =>
     props.ex &&
@@ -33,7 +33,7 @@ export const Line = styled.span`
       ${props =>
         props.three &&
         css`
-          transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-12px) rotate(-45deg);
         `}
     `}
 `

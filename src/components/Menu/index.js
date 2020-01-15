@@ -4,7 +4,12 @@ import { graphql, StaticQuery } from "gatsby"
 import { triggerBurgerWindow } from "../../state/action"
 
 /* components */
-import { Container, Item, Anchor } from "./Styled"
+import { Container, Item, Anchor, ItemContainer, ArrowImage } from "./Styled"
+import Arrow from "../../../static/assets/images/arrow.png"
+
+const isActive = ({ isCurrent }) => {
+  return isCurrent ? { id: "selected" } : null
+}
 
 const Menu = ({
   data: {
@@ -18,15 +23,18 @@ const Menu = ({
   return (
     <Container status={burgerWindow}>
       {pages.map(page => (
-        <Item>
-          <Anchor
-            activeStyle={{ color: "white" }}
-            onClick={() => dispatch(triggerBurgerWindow("closed"))}
-            to={page.slug}
-          >
-            {page.name}
-          </Anchor>
-        </Item>
+        <ItemContainer>
+          <Item>
+            <Anchor
+              getProps={isActive}
+              onClick={() => dispatch(triggerBurgerWindow("closed"))}
+              to={page.slug}
+            >
+              {page.name}
+              <ArrowImage src={Arrow}></ArrowImage>
+            </Anchor>
+          </Item>
+        </ItemContainer>
       ))}
     </Container>
   )

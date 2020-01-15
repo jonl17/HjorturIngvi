@@ -6,11 +6,15 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
     }
     #selected { /** for links */
-        span {
-            background: black;
+        img {
+            display: block !important;
         }
     }
     .readText {
         color: gray;
+    }
+    ::selection {
+        background: lightgray;
+        color: white;
     }
 `
