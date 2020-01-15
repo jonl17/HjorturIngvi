@@ -10,10 +10,10 @@ module.exports = {
     subtitle: `Pianist - Composer - Arranger`,
     pages: [
       { name: `About`, slug: `/` },
-      { name: `CV`, slug: `/cv` },
-      { name: `Contact`, slug: `/contact` },
       { name: `News`, slug: `/news` },
       { name: `Projects`, slug: `/projects` },
+      { name: `CV`, slug: `/cv` },
+      { name: `Contact`, slug: `/contact` },
     ],
   },
   plugins: [
