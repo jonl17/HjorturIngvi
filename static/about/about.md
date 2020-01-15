@@ -2,8 +2,8 @@
 title: About
 forsidu-mynd: /images/1-1_9.jpg
 ---
-Hjörtur Ingvi Jóhannsson er fæddur 1987 og er e.t.v. best þekktur sem hljómborðsleikari hljómsveitarinnar Hjaltalín. 
+Hjörtur Ingvi Jóhannsson er sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 
-Hann er virkur píanóleikari, tónskáld og útsetjari, auk þess að kenna á píanó við Menntaskólann í Tónlist. Þá hefur hann unnið í leikhúsinu, en hann er nú tónlistarstjóri í Ronju Ræningjadóttur í Þjóðleikhúsinu. 
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
 
-Hjörtur lærði djasspíanóleik í Konservatoríunni í Amsterdam, þaðan sem hann útskrifaðist 2015.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
