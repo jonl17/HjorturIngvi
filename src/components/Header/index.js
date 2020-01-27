@@ -15,18 +15,12 @@ const Header = ({
     <Container>
       {pages.map((item, index) =>
         item.position === `header` ? (
-          <>
-            <Text key={index}>
-              <Anchor
-                className="bold"
-                activeClassName="selected"
-                to={item.slug}
-              >
-                <Underline></Underline>
-                {item.name}
-              </Anchor>
-            </Text>
-          </>
+          <Text key={index}>
+            <Anchor className="bold" activeClassName="selected" to={item.slug}>
+              <Underline></Underline>
+              {item.name}
+            </Anchor>
+          </Text>
         ) : (
           ""
         )

@@ -18,7 +18,6 @@ const SEO = ({
         {description && (
           <meta property="og:description" content={description} />
         )}
-        <link rel="stylesheet" type="text/css" href="fonts/fonts.css" />
       </Helmet>
     </>
   )

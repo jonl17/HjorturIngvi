@@ -2,6 +2,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { setDevice } from "../state/action"
 import { GlobalStyle } from "../components/GlobalStyle"
+import "./fonts.css"
 
 /** components */
 import { Container } from "./Styled"
