@@ -4,10 +4,10 @@ import { Link } from "gatsby"
 export const Container = styled.div`
   position: absolute;
   width: 100%;
-  height: 125px;
-  width: 450px;
+  height: 100px;
+  width: 500px;
   left: 50%;
-  margin-left: -225px;
+  margin-left: -250px;
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;

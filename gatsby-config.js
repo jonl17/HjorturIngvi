@@ -12,7 +12,7 @@ module.exports = {
       { name: `Hjörtur Jóhannsson`, slug: `/about`, position: `header` },
       { name: `News`, slug: `/news`, position: `header` },
       { name: `Concerts`, slug: `/concerts`, position: `header` },
-      { name: `CV`, slug: `/cv`, position: `header` },
+      { name: `Curriculum vitae`, slug: `/cv`, position: `header` },
       { name: `Projects`, slug: `/projects`, position: `sidebar` },
       { name: `Contact`, slug: `/contact`, position: `sidebar` },
     ],

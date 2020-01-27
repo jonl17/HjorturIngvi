@@ -1,10 +1,49 @@
 import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 
 /* components */
-import { Container } from "./Styled"
+import { Container, Text, Anchor, Underline } from "./Styled"
 
-const Sidebar = () => {
-  return <Container>Sidebar</Container>
+const Sidebar = ({
+  data: {
+    site: {
+      siteMetadata: { pages },
+    },
+  },
+}) => {
+  return (
+    <Container>
+      {pages.map((item, index) =>
+        item.position === `sidebar` ? (
+          <Text key={index}>
+            <Anchor activeClassName="selected" className="bold" to={item.slug}>
+              <Underline></Underline>
+              {item.name}
+            </Anchor>
+          </Text>
+        ) : (
+          ""
+        )
+      )}
+    </Container>
+  )
 }
 
-export default Sidebar
+export default props => (
+  <StaticQuery
+    query={graphql`
+      {
+        site {
+          siteMetadata {
+            pages {
+              name
+              slug
+              position
+            }
+          }
+        }
+      }
+    `}
+    render={data => <Sidebar data={data} {...props}></Sidebar>}
+  ></StaticQuery>
+)
