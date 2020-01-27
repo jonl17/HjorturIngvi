@@ -5,14 +5,16 @@ import { graphql, StaticQuery } from "gatsby"
 import { Container, Anchor } from "./Styled"
 
 const Homebutton = ({
+  pathname,
   data: {
     site: {
       siteMetadata: { title },
     },
   },
 }) => {
+  console.log(pathname)
   return (
-    <Container>
+    <Container home={pathname === "/"}>
       <Anchor to="/" className="bold">
         {title}
       </Anchor>

@@ -37,7 +37,7 @@ class Layout extends React.Component {
           <Header></Header>
           {this.props.children}
           <Sidebar></Sidebar>
-          <Homebutton></Homebutton>
+          <Homebutton pathname={this.props.location.pathname}></Homebutton>
         </Container>
       </>
     )
