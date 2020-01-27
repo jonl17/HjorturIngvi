@@ -7,7 +7,7 @@ import { Container, Text, Anchor, Underline } from "./Styled"
 const Sidebar = ({
   data: {
     site: {
-      siteMetadata: { pages },
+      siteMetadata: { pages, title },
     },
   },
 }) => {
@@ -35,6 +35,7 @@ export default props => (
       {
         site {
           siteMetadata {
+            title
             pages {
               name
               slug

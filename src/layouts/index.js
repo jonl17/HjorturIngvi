@@ -9,6 +9,7 @@ import { Container } from "./Styled"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Sidebar from "../components/Sidebar"
+import Homebutton from "../components/Homebutton"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -36,6 +37,7 @@ class Layout extends React.Component {
           <Header></Header>
           {this.props.children}
           <Sidebar></Sidebar>
+          <Homebutton></Homebutton>
         </Container>
       </>
     )

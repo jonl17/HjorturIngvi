@@ -5,7 +5,7 @@ export const Container = styled.div`
   position: absolute;
   bottom: 0;
   box-sizing: border-box;
-  padding: 75px;
+  padding: 0 75px 45px 75px;
 `
 export const Text = styled.p`
   display: flex;

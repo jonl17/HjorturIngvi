@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: `Hjörtur Jóhannsson`,
-    subtitle: `Pianist - Composer - Arranger`,
+    subtitle: `Pianist/Composer/Arranger`,
     pages: [
       { name: `Hjörtur Jóhannsson`, slug: `/about`, position: `header` },
       { name: `News`, slug: `/news`, position: `header` },

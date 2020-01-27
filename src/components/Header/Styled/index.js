@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export const Container = styled.div`
   position: absolute;
   width: 100%;
-  height: 100px;
+  height: 75px;
   width: 500px;
   left: 50%;
   margin-left: -250px;
