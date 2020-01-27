@@ -5,11 +5,6 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0;
         height: 100%;
     }
-    #selected { /** for links */
-        img {
-            display: block !important;
-        }
-    }
     .readText {
         color: gray;
     }

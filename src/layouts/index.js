@@ -6,6 +6,7 @@ import { GlobalStyle } from "../components/GlobalStyle"
 /** components */
 import { Container } from "./Styled"
 import SEO from "../components/SEO"
+import Header from "../components/Header"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -29,7 +30,10 @@ class Layout extends React.Component {
       <>
         <SEO></SEO>
         <GlobalStyle></GlobalStyle>
-        <Container>{this.props.children}</Container>
+        <Container>
+          <Header></Header>
+          {this.props.children}
+        </Container>
       </>
     )
   }

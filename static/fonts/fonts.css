@@ -1,14 +1,21 @@
 @font-face {
-  font-family: Custom Reg;
-  src: url("./assets/reg.otf");
+  font-family: "Grotesk Reg";
+  src: url("./assets/Format/grotesk_reg.ttf") format("truetype");
 }
 @font-face {
-  font-family: Custom Bold;
-  src: url("./assets/bold.otf");
+  font-family: "Grotesk Fat";
+  src: url("./assets/Format/Format\ Grotesk\ Demo\ Fett.ttf");
+}
+@font-face {
+  font-family: "Grotesk Light";
+  src: url("./assets/Format/grotesk_light.ttf");
 }
 * {
-  font-family: Custom Reg;
+  font-family: "Grotesk Light";
 }
-.selected {
-  font-family: Custom Bold;
+.bold {
+  font-family: "Grotesk Fat";
+}
+.light {
+  font-family: "Grotesk Light";
 }
