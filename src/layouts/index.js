@@ -5,9 +5,7 @@ import { GlobalStyle } from "../components/GlobalStyle"
 
 /** components */
 import { Container } from "./Styled"
-import Burger from "../components/Burger"
 import SEO from "../components/SEO"
-import Menu from "../components/Menu"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -17,6 +15,7 @@ class Layout extends React.Component {
   componentDidMount() {
     this.callBack()
     window.addEventListener("resize", this.callBack)
+    /** register current page */
   }
   componentWillUnmount() {
     window.removeEventListener("resize", this.callBack)
@@ -30,8 +29,6 @@ class Layout extends React.Component {
       <>
         <SEO></SEO>
         <GlobalStyle></GlobalStyle>
-        <Burger></Burger>
-        <Menu></Menu>
         <Container>{this.props.children}</Container>
       </>
     )

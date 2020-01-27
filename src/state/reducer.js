@@ -1,8 +1,9 @@
-import { SET_DEVICE, TRIGGER_BURGER_WINDOW } from "./action"
+import { SET_DEVICE, TRIGGER_BURGER_WINDOW, SET_CURRENT_PAGE } from "./action"
 
 const initialState = {
   device: undefined,
   burgerWindow: "closed",
+  currentPage: undefined,
 }
 
 export default (state = initialState, action) => {
@@ -21,6 +22,8 @@ export default (state = initialState, action) => {
       return { ...state, device: device }
     case TRIGGER_BURGER_WINDOW:
       return { ...state, burgerWindow: action.trigger }
+    case SET_CURRENT_PAGE:
+      return { ...state, currentPage: action.page }
     default:
       return state
   }
