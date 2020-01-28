@@ -6,7 +6,7 @@ export const Container = styled.div`
   position: absolute;
   display: inline-block;
   left: 75px;
-  bottom: 55%;
+  bottom: 52%;
   height: 23px;
   width: 340px;
   transform: translateX(-180px) rotate(-90deg);

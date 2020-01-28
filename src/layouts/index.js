@@ -12,6 +12,7 @@ import Sidebar from "../components/Sidebar"
 import Homebutton from "../components/Homebutton"
 import Footer from "../components/Footer"
 import ProfilePicture from "../components/ProfilePicture"
+import Player from "../components/Player"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -37,6 +38,7 @@ class Layout extends React.Component {
         <GlobalStyle></GlobalStyle>
         <Container>
           <Header></Header>
+          <Player></Player>
           {this.props.children}
           <ProfilePicture></ProfilePicture>
           <Sidebar></Sidebar>
