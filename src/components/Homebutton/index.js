@@ -2,13 +2,13 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
 /* components */
-import { Container, Anchor } from "./Styled"
+import { Container, Anchor, Text } from "./Styled"
 
 const Homebutton = ({
   pathname,
   data: {
     site: {
-      siteMetadata: { title },
+      siteMetadata: { title, subtitle },
     },
   },
 }) => {
@@ -16,7 +16,8 @@ const Homebutton = ({
   return (
     <Container home={pathname === "/"}>
       <Anchor to="/" className="bold">
-        {title}
+        <Text className="bold">{title}</Text>
+        <Text subtitle>{subtitle}</Text>
       </Anchor>
     </Container>
   )
@@ -29,6 +30,7 @@ export default props => (
         site {
           siteMetadata {
             title
+            subtitle
           }
         }
       }

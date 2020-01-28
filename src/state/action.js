@@ -13,3 +13,7 @@ export const setCurrentPage = page => ({
   type: SET_CURRENT_PAGE,
   page,
 })
+export const CHANGE_LANGUAGE = "CHANGE_LANGUAGE"
+export const changeLanguage = () => ({
+  type: CHANGE_LANGUAGE,
+})

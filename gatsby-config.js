@@ -6,15 +6,16 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Hjörtur Jóhannsson`,
+    title: `Hjörtur Ingvi Jóhannsson`,
     subtitle: `Pianist/Composer/Arranger`,
     pages: [
-      { name: `Hjörtur Jóhannsson`, slug: `/about`, position: `header` },
+      { name: `Hjörtur Ingvi Jóhannsson`, slug: `/about`, position: `header` },
       { name: `News`, slug: `/news`, position: `header` },
       { name: `Concerts`, slug: `/concerts`, position: `header` },
       { name: `Curriculum vitae`, slug: `/cv`, position: `header` },
       { name: `Projects`, slug: `/projects`, position: `sidebar` },
       { name: `Contact`, slug: `/contact`, position: `sidebar` },
+      { name: `ISL/ENG`, position: `sidebar`, type: `button` },
     ],
   },
   plugins: [

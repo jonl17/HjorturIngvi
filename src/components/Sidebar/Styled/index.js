@@ -1,5 +1,6 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { Link } from "gatsby"
+import { COLORS } from "../../../constants"
 
 export const Container = styled.div`
   position: absolute;
@@ -12,7 +13,7 @@ export const Text = styled.p`
   align-items: flex-end;
   position: relative;
   height: 100%;
-  padding-top: 75px;
+  padding-top: 1.5em;
   .selected > span {
     width: 100% !important;
   }
@@ -29,4 +30,17 @@ export const Underline = styled.span`
   bottom: -15px;
   transition: 0.2s ease-in-out;
   pointer-events: none;
+`
+export const Button = styled.span`
+  margin: 0;
+  &&:hover {
+    cursor: pointer;
+  }
+`
+export const Lang = styled.span`
+  ${props =>
+    props.selected &&
+    css`
+      color: ${COLORS.blue};
+    `}
 `

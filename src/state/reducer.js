@@ -1,9 +1,15 @@
-import { SET_DEVICE, TRIGGER_BURGER_WINDOW, SET_CURRENT_PAGE } from "./action"
+import {
+  SET_DEVICE,
+  TRIGGER_BURGER_WINDOW,
+  SET_CURRENT_PAGE,
+  CHANGE_LANGUAGE,
+} from "./action"
 
 const initialState = {
   device: undefined,
   burgerWindow: "closed",
   currentPage: undefined,
+  icelandic: false,
 }
 
 export default (state = initialState, action) => {
@@ -24,6 +30,8 @@ export default (state = initialState, action) => {
       return { ...state, burgerWindow: action.trigger }
     case SET_CURRENT_PAGE:
       return { ...state, currentPage: action.page }
+    case CHANGE_LANGUAGE:
+      return { ...state, icelandic: !state.icelandic }
     default:
       return state
   }
