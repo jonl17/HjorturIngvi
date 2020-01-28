@@ -17,6 +17,11 @@ module.exports = {
       { name: `Contact`, slug: `/contact`, position: `sidebar` },
       { name: `ISL/ENG`, position: `sidebar`, type: `button` },
     ],
+    socialMedia: [
+      { name: `Youtube`, link: `https://www.youtube.com/` },
+      { name: `Facebook`, link: `www.visir.is` },
+      { name: `Spotify`, link: `www.mbl.is` },
+    ],
   },
   plugins: [
     {

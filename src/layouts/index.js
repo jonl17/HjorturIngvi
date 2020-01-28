@@ -10,6 +10,7 @@ import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Sidebar from "../components/Sidebar"
 import Homebutton from "../components/Homebutton"
+import Footer from "../components/Footer"
 
 class Layout extends React.Component {
   constructor(props) {
@@ -38,6 +39,7 @@ class Layout extends React.Component {
           {this.props.children}
           <Sidebar></Sidebar>
           <Homebutton pathname={this.props.location.pathname}></Homebutton>
+          <Footer></Footer>
         </Container>
       </>
     )
