@@ -11,6 +11,7 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
+  z-index: 4;
 `
 export const Text = styled.p`
   display: flex;

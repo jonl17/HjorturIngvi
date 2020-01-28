@@ -11,14 +11,14 @@
   src: url("./assets/Format/grotesk_light.ttf");
 }
 * {
-  font-family: "Grotesk Light";
+  font-family: "Grotesk Reg";
 }
 .bold {
-  font-family: "Grotesk Fat";
+  font-family: "Grotesk Fat" !important;
 }
 .light {
-  font-family: "Grotesk Light";
+  font-family: "Grotesk Light" !important;
 }
 .reg {
-  font-family: "Grotesk Reg";
+  font-family: "Grotesk Reg" !important;
 }

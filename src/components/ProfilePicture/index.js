@@ -1,10 +1,44 @@
 import React from "react"
+import { graphql, StaticQuery } from "gatsby"
 
 /* components */
-import { Container } from "./Styled"
+import { Container, Image } from "./Styled"
 
-const ProfilePicture = () => {
-  return <Container>ProfilePicture</Container>
+const ProfilePicture = ({
+  data: {
+    markdownRemark: {
+      frontmatter: {
+        forsidu_mynd: {
+          childImageSharp: { fluid },
+        },
+      },
+    },
+  },
+}) => {
+  return (
+    <Container>
+      <Image fluid={fluid}></Image>
+    </Container>
+  )
 }
 
-export default ProfilePicture
+export default props => (
+  <StaticQuery
+    query={graphql`
+      {
+        markdownRemark(frontmatter: { title: { eq: "About" } }) {
+          frontmatter {
+            forsidu_mynd {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid_tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    `}
+    render={data => <ProfilePicture data={data} {...props}></ProfilePicture>}
+  ></StaticQuery>
+)

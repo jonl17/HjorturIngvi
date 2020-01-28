@@ -17,7 +17,9 @@ const Homebutton = ({
     <Container home={pathname === "/"}>
       <Anchor to="/" className="bold">
         <Text className="bold">{title}</Text>
-        <Text subtitle>{subtitle}</Text>
+        <Text className="light" subtitle>
+          {subtitle}
+        </Text>
       </Anchor>
     </Container>
   )
