@@ -32,3 +32,15 @@ collections:
         }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Content", name: "body", widget: "markdown" }
+    - name: "concerts"
+      label: "Concerts"
+      folder: "static/concerts"
+      editor:
+        preview: false
+      create: true
+      fields:
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Venue", name: "venue", widget: "string" }
+        - { label: "Date", name: "datetime", widget: "string" }
+        - { label: "Ticket required", name: "ticketsrequired", widget: "boolean" }
+        - { label: "Buy ticket link", name: "buyticketlink", widget: "string", required: false, hint: "T.d. miði.is" }

@@ -20,6 +20,10 @@ export const Text = styled.p`
 export const Anchor = styled(Link)`
   text-decoration: none;
   color: inherit;
+  transition: 0.2s ease-in-out;
+  &&:hover {
+    opacity: 0.7;
+  }
 `
 export const Underline = styled.span`
   height: 100%;

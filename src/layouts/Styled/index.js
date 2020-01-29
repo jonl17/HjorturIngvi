@@ -25,4 +25,8 @@ export const SidebarContainer = styled.div`
   position: absolute;
   top: 0;
   left: 0;
+  pointer-events: none;
+  * {
+    pointer-events: all;
+  }
 `

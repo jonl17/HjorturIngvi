@@ -2,7 +2,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100px;
@@ -12,6 +12,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  z-index: 8;
 `
 export const PlayButtonContainer = styled.div`
   height: 30px;

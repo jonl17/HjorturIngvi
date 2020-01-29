@@ -18,6 +18,10 @@ export const Anchor = styled.a`
   display: flex;
   align-items: center;
   color: inherit;
+  transition: 0.2s ease-in-out;
+  &&:hover {
+    opacity: 0.7;
+  }
 `
 export const Text = styled.p`
   box-sizing: border-box;
