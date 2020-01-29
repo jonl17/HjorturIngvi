@@ -30,5 +30,5 @@ collections:
           widget: "datetime",
           dateformat: "DD.MM.YYYY",
         }
-      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Content", name: "body", widget: "markdown" }
