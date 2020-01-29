@@ -17,3 +17,8 @@ export const CHANGE_LANGUAGE = "CHANGE_LANGUAGE"
 export const changeLanguage = () => ({
   type: CHANGE_LANGUAGE,
 })
+// plays song if store.play is false | pauses if store.play is true
+export const PLAY_PAUSE = "PLAY_PAUSE"
+export const playPause = () => ({
+  type: PLAY_PAUSE,
+})

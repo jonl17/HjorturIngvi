@@ -31,7 +31,7 @@ export default props => (
             forsidu_mynd {
               childImageSharp {
                 fluid {
-                  ...GatsbyImageSharpFluid_tracedSVG
+                  ...GatsbyImageSharpFluid
                 }
               }
             }

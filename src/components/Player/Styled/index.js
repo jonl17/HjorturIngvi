@@ -15,14 +15,31 @@ export const Container = styled.div`
   z-index: 8;
 `
 export const PlayButtonContainer = styled.div`
-  height: 30px;
   width: 30px;
+  &&:hover {
+    cursor: pointer;
+  }
 `
 export const PlayButtonImage = styled(Img)`
   width: 100;
+  height: 50px;
+`
+export const StopButtonContainer = styled.div`
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  width: 28px;
+  justify-content: space-between;
+  &&:hover {
+    cursor: pointer;
+  }
+`
+export const StopButtonImage = styled(Img)`
+  height: 100%;
+  width: 9px;
 `
 export const TrackInfo = styled.div`
-  margin-top: 40px;
+  margin-top: 10px;
 `
 export const Name = styled.p`
   margin: 0;
