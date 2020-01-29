@@ -4,6 +4,8 @@ import {
   SET_CURRENT_PAGE,
   CHANGE_LANGUAGE,
   PLAY_PAUSE,
+  SET_CURRENT_TIME,
+  SET_SONG_DURATION,
 } from "./action"
 
 const initialState = {
@@ -12,6 +14,8 @@ const initialState = {
   currentPage: undefined,
   icelandic: false,
   play: false,
+  duration: undefined,
+  currentTime: undefined,
 }
 
 export default (state = initialState, action) => {
@@ -37,6 +41,10 @@ export default (state = initialState, action) => {
     // plays song if store.play is false | pauses if store.play is true
     case PLAY_PAUSE:
       return { ...state, play: !state.play }
+    case SET_SONG_DURATION:
+      return { ...state, duration: action.duration }
+    case SET_CURRENT_TIME:
+      return { ...state, currentTime: action.time }
     default:
       return state
   }

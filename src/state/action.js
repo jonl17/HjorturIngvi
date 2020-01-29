@@ -22,3 +22,15 @@ export const PLAY_PAUSE = "PLAY_PAUSE"
 export const playPause = () => ({
   type: PLAY_PAUSE,
 })
+// registering both song duration
+export const SET_SONG_DURATION = "SET_SONG_DURATION"
+export const setSongDuration = duration => ({
+  type: SET_SONG_DURATION,
+  duration,
+})
+// + currentTime
+export const SET_CURRENT_TIME = "SET_CURRENT_TIME"
+export const setCurrentTime = time => ({
+  type: SET_CURRENT_TIME,
+  time,
+})

@@ -1,7 +1,7 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { useSelector, useDispatch } from "react-redux"
-import { playPause } from "../../state/action"
+import { playPause, setSongDuration, setCurrentTime } from "../../state/action"
 
 /* components */
 import {
@@ -13,25 +13,54 @@ import {
   TrackInfo,
   Name,
   Time,
+  Audio,
 } from "./Styled"
+import Line from "./components/Line"
 
 const Player = ({
   data: {
     rectOne: { fluid: stoplineone },
     rectTwo: { fluid: stoplinetwo },
     play: { fluid: playbtn },
+    song: { publicURL },
   },
 }) => {
   const play = useSelector(state => state.reducer.play)
   const dispatch = useDispatch()
+  const myPlayer = useRef()
+  const playSong = () => {
+    myPlayer.current.play()
+    dispatch(setSongDuration(myPlayer.current.duration))
+  }
+  const pauseSong = () => {
+    myPlayer.current.pause()
+  }
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!play) {
+        dispatch(setCurrentTime(myPlayer.current.currentTime))
+      }
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [dispatch])
   return (
     <Container>
       {!play ? (
-        <PlayButtonContainer onClick={() => dispatch(playPause())}>
+        <PlayButtonContainer
+          onClick={() => {
+            dispatch(playPause())
+            playSong()
+          }}
+        >
           <PlayButtonImage fluid={playbtn}></PlayButtonImage>
         </PlayButtonContainer>
       ) : (
-        <StopButtonContainer onClick={() => dispatch(playPause())}>
+        <StopButtonContainer
+          onClick={() => {
+            dispatch(playPause())
+            pauseSong()
+          }}
+        >
           <StopButtonImage fluid={stoplineone}></StopButtonImage>
           <StopButtonImage fluid={stoplinetwo}></StopButtonImage>
         </StopButtonContainer>
@@ -40,6 +69,10 @@ const Player = ({
         <Name>24 pictures: Cascade</Name>
         <Time>2:15</Time>
       </TrackInfo>
+      <Audio ref={myPlayer} controls>
+        <source src={publicURL}></source>
+      </Audio>
+      <Line></Line>
     </Container>
   )
 }
@@ -66,6 +99,9 @@ export default props => (
           fluid {
             ...GatsbyImageSharpFluid_tracedSVG
           }
+        }
+        song: file(name: { eq: "24 pictures Cascade" }) {
+          publicURL
         }
       }
     `}

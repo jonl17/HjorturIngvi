@@ -47,3 +47,6 @@ export const Name = styled.p`
 export const Time = styled.p`
   margin: 0;
 `
+export const Audio = styled.audio`
+  visibility: hidden;
+`
