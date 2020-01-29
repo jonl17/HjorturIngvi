@@ -1,6 +1,7 @@
 ---
 title: About
 forsidu-mynd: /images/hjortur.png
+song: /images/24 pictures Cascade.mp3
 ---
 Hjörtur Ingvi er fæddur í Reykjavík þann 7. september 1987. Hann hóf ungur píanónám í Tónskóla Eddu Borg, en þaðan lá leiðin í Tónlistarskóla F.Í.H., þaðan sem hann útskrifaðist með burtfararpróf í klassískum píanóleik árið 2010. Eftir að hafa lagt stund á hagfræði við H.Í. þá hóf Hjörtur nám við Konservatoríið í Amsterdam, þaðan sem hann útskrifaðist með B.M. gráðu í djasspíanóleik, sem innihélt einnig kennsluréttindi. Að lokinni úskrift þaðan sumarið 2015 fluttist Hjörtur aftur til Íslands, þar sem hann starfar sem tónlistarmaður og píanókennari. 
 
