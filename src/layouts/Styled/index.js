@@ -7,13 +7,16 @@ export const Container = styled.div`
   min-height: 100%;
   width: 100%;
   position: relative;
-  margin-bottom: -75px;
+  margin: auto auto -75px auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 `
 export const PageContainer = styled.div`
-  padding-top: 150px;
-  padding-bottom: 150px;
+  padding-top: 130px;
+  padding-bottom: 100px;
   height: 100%;
-  width: 100%;
+  width: 500px;
 `
 export const SidebarContainer = styled.div`
   height: 100vh;

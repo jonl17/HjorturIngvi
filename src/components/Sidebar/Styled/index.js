@@ -12,7 +12,7 @@ export const Text = styled.p`
   align-items: flex-end;
   position: relative;
   height: 100%;
-  padding-top: 1.5em;
+  padding-top: 1em;
   .selected > span {
     width: 100% !important;
   }

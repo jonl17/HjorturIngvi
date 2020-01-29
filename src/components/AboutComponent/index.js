@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { useSelector } from "react-redux"
 
 /* components */
-import { Container, Content } from "./Styled"
+import { Content } from "./Styled"
 
 const splitTextIntoLanguage = text => {
   return text.split("-ENSKA-")
@@ -17,13 +17,11 @@ const AboutComponent = ({
   const bothLanguages = splitTextIntoLanguage(html)
   const icelandic = useSelector(state => state.reducer.icelandic)
   return (
-    <Container>
-      <Content
-        dangerouslySetInnerHTML={{
-          __html: icelandic ? bothLanguages[0] : bothLanguages[1],
-        }}
-      ></Content>
-    </Container>
+    <Content
+      dangerouslySetInnerHTML={{
+        __html: icelandic ? bothLanguages[0] : bothLanguages[1],
+      }}
+    ></Content>
   )
 }
 
