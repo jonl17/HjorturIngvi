@@ -1,10 +1,12 @@
 import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
-    html, body {
+    html, body, #___gatsby, #gatsby-focus-wrapper {
         margin: 0;
         height: 100%;
+        background: #E5E5E5;
     }
+
     .readText {
         color: gray;
     }

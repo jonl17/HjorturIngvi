@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const Container = styled.div`
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -11,10 +11,12 @@ export const Container = styled.div`
 
 export const Content = styled.div`
   width: 500px;
-  height: 500px;
   line-height: 152%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  p {
+    margin-top: 0;
+  }
 `

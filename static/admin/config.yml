@@ -16,3 +16,19 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Texti", name: "body", widget: "markdown" }
       - { label: "Mynd", name: "forsidu-mynd", widget: "image" }
+  - name: "news"
+    label: "News"
+    folder: "static/news"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - {
+          label: "Date",
+          name: "date",
+          widget: "datetime",
+          dateformat: "DD.MM.YYYY",
+        }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Content", name: "body", widget: "markdown" }

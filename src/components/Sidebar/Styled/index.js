@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components"
 import { Link } from "gatsby"
-import { COLORS } from "../../../constants"
 
 export const Container = styled.div`
   position: absolute;
@@ -38,9 +37,10 @@ export const Button = styled.span`
   }
 `
 export const Lang = styled.span`
+  opacity: 0.6;
   ${props =>
     props.selected &&
     css`
-      color: ${COLORS.blue};
-    `}
+      opacity: 1;
+    `};
 `

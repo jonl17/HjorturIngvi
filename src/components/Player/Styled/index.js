@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
-import { COLORS } from "../../../constants"
 
 export const Container = styled.div`
   position: absolute;
@@ -23,7 +22,6 @@ export const PlayButtonImage = styled(Img)`
 `
 export const TrackInfo = styled.div`
   margin-top: 40px;
-  color: ${COLORS.blue};
 `
 export const Name = styled.p`
   margin: 0;

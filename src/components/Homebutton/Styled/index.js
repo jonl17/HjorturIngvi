@@ -21,7 +21,7 @@ export const Container = styled.div`
 `
 export const Text = styled.h1`
   text-align: center;
-  font-size: 25px;
+  font-size: 23px;
   ${props =>
     props.subtitle &&
     css`

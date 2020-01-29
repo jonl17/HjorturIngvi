@@ -1,8 +1,7 @@
 import styled from "styled-components"
-import { COLORS } from "../../../constants"
 
 export const Container = styled.div`
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 75px;
   width: 500px;
@@ -16,9 +15,9 @@ export const Container = styled.div`
 `
 export const Anchor = styled.a`
   text-decoration: none;
-  color: ${COLORS.blue};
   display: flex;
   align-items: center;
+  color: inherit;
 `
 export const Text = styled.p`
   box-sizing: border-box;
@@ -28,6 +27,6 @@ export const Text = styled.p`
 export const Circle = styled.span`
   height: 15px;
   width: 15px;
-  background: ${COLORS.blue};
   border-radius: 50%;
+  background: black;
 `

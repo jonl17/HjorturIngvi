@@ -5,7 +5,7 @@ import { GlobalStyle } from "../components/GlobalStyle"
 import "./fonts.css"
 
 /** components */
-import { Container } from "./Styled"
+import { Container, PageContainer, SidebarContainer } from "./Styled"
 import SEO from "../components/SEO"
 import Header from "../components/Header"
 import Sidebar from "../components/Sidebar"
@@ -39,12 +39,14 @@ class Layout extends React.Component {
         <Container>
           <Header></Header>
           <Player></Player>
-          {this.props.children}
+          <PageContainer>{this.props.children}</PageContainer>
           <ProfilePicture></ProfilePicture>
-          <Sidebar></Sidebar>
-          <Homebutton pathname={this.props.location.pathname}></Homebutton>
-          <Footer></Footer>
+          <SidebarContainer>
+            <Sidebar></Sidebar>
+            <Homebutton pathname={this.props.location.pathname}></Homebutton>
+          </SidebarContainer>
         </Container>
+        <Footer></Footer>
       </>
     )
   }

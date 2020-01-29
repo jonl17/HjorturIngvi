@@ -6,6 +6,7 @@ export const Container = styled.div`
   height: 100vh;
   width: 20%;
   right: 0;
+  top: 0;
 `
 export const Image = styled(Img)`
   height: 100%;
