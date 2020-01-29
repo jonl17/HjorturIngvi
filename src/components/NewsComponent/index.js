@@ -4,7 +4,7 @@ import { graphql, StaticQuery } from "gatsby"
 /* components */
 import { Container, Date, Title, Content } from "./Styled"
 
-const Newscontainer = ({
+const NewsComponent = ({
   data: {
     news: { nodes },
   },
@@ -36,6 +36,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Newscontainer data={data} {...props}></Newscontainer>}
+    render={data => <NewsComponent data={data} {...props}></NewsComponent>}
   ></StaticQuery>
 )

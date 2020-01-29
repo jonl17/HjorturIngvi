@@ -14,4 +14,7 @@ export const GlobalStyle = createGlobalStyle`
         background: lightgray;
         color: white;
     }
+    h1 {
+        font-size: 22px;
+    }
 `

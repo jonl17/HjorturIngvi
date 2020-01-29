@@ -1,10 +1,10 @@
 import React from "react"
 
 /** components */
-import NewsContainer from "../components/NewsContainer"
+import NewsComponent from "../components/NewsComponent"
 
 const News = () => {
-  return <NewsContainer></NewsContainer>
+  return <NewsComponent></NewsComponent>
 }
 
 export default News
