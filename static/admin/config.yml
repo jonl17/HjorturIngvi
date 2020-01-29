@@ -41,7 +41,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Venue", name: "venue", widget: "string" }
-      - { label: "Date", name: "datetime", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Ticket required", name: "ticketsrequired", widget: "boolean" }
       - {
           label: "Buy ticket link",
