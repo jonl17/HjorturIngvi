@@ -24,7 +24,9 @@ const ProfilePicture = ({
     <Container>
       <Image
         fluid={
-          currentPage === "/" || currentPage === "/about"
+          currentPage === "/" ||
+          currentPage === "/about" ||
+          currentPage === undefined
             ? profile_pic
             : concert_pic
         }
