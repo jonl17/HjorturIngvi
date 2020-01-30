@@ -1,8 +1,10 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import { useDispatch } from "react-redux"
 
 /* components */
 import { Container, Anchor, Text } from "./Styled"
+import { SET_CURRENT_PAGE } from "../../state/action"
 
 const Homebutton = ({
   pathname,
@@ -12,7 +14,8 @@ const Homebutton = ({
     },
   },
 }) => {
-  console.log(pathname)
+  const dispatch = useDispatch()
+  dispatch({ type: SET_CURRENT_PAGE, page: pathname })
   return (
     <Container home={pathname === "/"}>
       <Anchor to="/" className="bold">
