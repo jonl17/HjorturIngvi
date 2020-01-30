@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components"
+import { COLORS } from "../../constants"
 
 export const GlobalStyle = createGlobalStyle`
     html, body, #___gatsby, #gatsby-focus-wrapper {
@@ -11,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
         color: gray;
     }
     ::selection {
-        background: lightgray;
-        color: white;
+        background: transparent;
+        color: ${COLORS.blue};
     }
     h1 {
         font-size: 22px;

@@ -16,6 +16,8 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Text", name: "body", widget: "markdown" }
       - { label: "Image", name: "forsidu-mynd", widget: "image" }
+      - { label: "Second Image", name: "second-image", widget: "image" }
+      - { label: "Song title", name: "songtitle", widget: "string" }
       - { label: "Song", name: "song", widget: "file" }
   - name: "news"
     label: "News"

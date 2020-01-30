@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 export const Container = styled.div`
   transition: 0.5s ease-in-out;
-  position: absolute;
+  position: fixed;
   display: inline-block;
   left: 75px;
   bottom: 52%;

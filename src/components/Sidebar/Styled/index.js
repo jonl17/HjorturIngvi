@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 import { Link } from "gatsby"
 
 export const Container = styled.div`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   box-sizing: border-box;
   padding: 0 75px 45px 75px;

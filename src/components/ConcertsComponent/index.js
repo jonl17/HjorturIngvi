@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import { useSelector } from "react-redux"
 
 /* components */
 import { Container, Title, Venue, Date, TicketLink } from "./Styled"
@@ -9,7 +10,7 @@ const ConcertsComponent = ({
     concerts: { nodes },
   },
 }) => {
-  console.log(nodes)
+  const icelandic = useSelector(state => state.reducer.icelandic)
   return nodes.map((concert, index) => (
     <Container key={index}>
       <Title className="bold">{concert.frontmatter.title}</Title>
@@ -21,7 +22,7 @@ const ConcertsComponent = ({
           href={concert.frontmatter.buyticketlink}
           className="bold"
         >
-          Kaupa miða
+          {icelandic ? "Kaupa miða" : "Buy tickets"}
         </TicketLink>
       ) : (
         ""
