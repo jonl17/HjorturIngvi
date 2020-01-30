@@ -46,10 +46,7 @@ export const TrackInfo = styled.div`
 `
 
 export const Name = styled.p`
-  margin: 5px 0;
-`
-export const Time = styled.p`
-  margin: 5px 0;
+  margin: 10px 0 0 0;
 `
 export const Audio = styled.audio`
   visibility: hidden;

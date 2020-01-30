@@ -12,22 +12,32 @@ import {
   StopButtonImage,
   TrackInfo,
   Name,
-  Time,
   Audio,
 } from "./Styled"
 import Line from "./components/Line"
+import Time from "./components/Time"
 
 const Player = ({
   data: {
     rectOne: { fluid: stoplineone },
     rectTwo: { fluid: stoplinetwo },
     play: { fluid: playbtn },
-    song: { publicURL },
+    song: {
+      frontmatter: {
+        songtitle,
+        song: { publicURL },
+      },
+    },
   },
 }) => {
+  // store variables
   const play = useSelector(state => state.reducer.play)
+
   const dispatch = useDispatch()
+
+  // player ref
   const myPlayer = useRef()
+
   const playSong = () => {
     myPlayer.current.play()
     dispatch(setSongDuration(myPlayer.current.duration))
@@ -35,14 +45,17 @@ const Player = ({
   const pauseSong = () => {
     myPlayer.current.pause()
   }
+
+  // update current time of song every 500ms
   useEffect(() => {
     const interval = setInterval(() => {
       if (myPlayer.current.currentTime !== undefined) {
         dispatch(setCurrentTime(myPlayer.current.currentTime))
       }
-    }, 500)
+    }, 1000)
     return () => clearInterval(interval)
   }, [dispatch])
+
   return (
     <Container>
       {!play ? (
@@ -66,8 +79,8 @@ const Player = ({
         </StopButtonContainer>
       )}
       <TrackInfo>
-        <Name>24 pictures: Cascade</Name>
-        <Time>2:15</Time>
+        <Name>{songtitle}</Name>
+        <Time></Time>
       </TrackInfo>
       <Audio ref={myPlayer} controls>
         <source src={publicURL}></source>
@@ -100,8 +113,13 @@ export default props => (
             ...GatsbyImageSharpFluid_tracedSVG
           }
         }
-        song: file(name: { eq: "24 pictures Cascade" }) {
-          publicURL
+        song: markdownRemark(fileAbsolutePath: { regex: "/about/" }) {
+          frontmatter {
+            songtitle
+            song {
+              publicURL
+            }
+          }
         }
       }
     `}
