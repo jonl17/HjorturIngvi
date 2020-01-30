@@ -37,10 +37,10 @@ const Player = ({
   }
   useEffect(() => {
     const interval = setInterval(() => {
-      if (!play) {
+      if (myPlayer.current.currentTime !== undefined) {
         dispatch(setCurrentTime(myPlayer.current.currentTime))
       }
-    }, 1000)
+    }, 500)
     return () => clearInterval(interval)
   }, [dispatch])
   return (

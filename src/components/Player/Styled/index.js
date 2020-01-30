@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin-top: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   z-index: 8;
 `
 export const PlayButtonContainer = styled.div`
@@ -28,24 +28,28 @@ export const StopButtonContainer = styled.div`
   height: 50px;
   display: flex;
   flex-direction: row;
-  width: 28px;
+  width: 27px;
   justify-content: space-between;
+  box-sizing: border-box;
+  padding-bottom: 5px;
   &&:hover {
     cursor: pointer;
   }
 `
 export const StopButtonImage = styled(Img)`
   height: 100%;
-  width: 9px;
+  width: 8px;
 `
 export const TrackInfo = styled.div`
   margin-top: 10px;
+  padding-bottom: 10px;
 `
+
 export const Name = styled.p`
-  margin: 0;
+  margin: 5px 0;
 `
 export const Time = styled.p`
-  margin: 0;
+  margin: 5px 0;
 `
 export const Audio = styled.audio`
   visibility: hidden;
