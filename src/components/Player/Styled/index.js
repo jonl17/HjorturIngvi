@@ -37,7 +37,7 @@ export const StopButtonContainer = styled.div`
   }
 `
 export const StopButtonImage = styled(Img)`
-  height: 100%;
+  height: 50px;
   width: 8px;
 `
 export const TrackInfo = styled.div`

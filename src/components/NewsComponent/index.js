@@ -12,7 +12,7 @@ const NewsComponent = ({
   return nodes.map((frett, index) => (
     <Container key={index}>
       <Date className="bold">{frett.frontmatter.date}</Date>
-      <Title>{frett.frontmatter.title}</Title>
+      <Title className="bold">{frett.frontmatter.title}</Title>
       <Content dangerouslySetInnerHTML={{ __html: frett.html }}></Content>
     </Container>
   ))

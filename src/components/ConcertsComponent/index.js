@@ -12,7 +12,7 @@ const ConcertsComponent = ({
   console.log(nodes)
   return nodes.map((concert, index) => (
     <Container key={index}>
-      <Title>{concert.frontmatter.title}</Title>
+      <Title className="bold">{concert.frontmatter.title}</Title>
       <Venue>{concert.frontmatter.venue}</Venue>
       <Date className="bold">{concert.frontmatter.date}</Date>
       {concert.frontmatter.ticketsrequired ? (
