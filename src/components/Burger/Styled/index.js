@@ -1,13 +1,12 @@
 import styled, { css } from "styled-components"
-import { COLORS } from "../../../constants"
 
 export const Container = styled.div`
-  height: 36px;
-  width: 36px;
+  height: 30px;
+  width: 32px;
   position: fixed;
   top: 40px;
   right: 40px;
-  z-index: 6;
+  z-index: 10;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -19,12 +18,11 @@ export const Container = styled.div`
 export const Line = styled.span`
   height: 4px;
   width: 100%;
-  background: black;
+  border-bottom: 2px solid;
   transition: 0.2s ease-in-out;
   ${props =>
     props.ex &&
     css`
-      background: white;
       ${props =>
         props.one &&
         css`

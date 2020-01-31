@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import Img from "gatsby-image"
 
 export const Container = styled.div`
@@ -7,12 +7,16 @@ export const Container = styled.div`
   left: 0;
   height: 100px;
   width: 200px;
-  margin-left: 75px;
-  margin-top: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   z-index: 8;
+  margin: 25px 0 0 15px;
+  ${props =>
+    props.device === `browser` &&
+    css`
+      margin: 25px 0 0 75px;
+    `}
 `
 export const PlayButtonContainer = styled.div`
   width: 30px;

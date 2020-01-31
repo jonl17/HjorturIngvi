@@ -1,24 +1,24 @@
 import React from "react"
 import { Container, Line } from "./Styled"
 import { useSelector, useDispatch } from "react-redux"
-import { triggerBurgerWindow } from "../../state/action"
+import { triggerMobileMenu } from "../../state/action"
 
 // open burger menu
 const dispatches = dispatch => {
-  dispatch(triggerBurgerWindow("open"))
+  dispatch(triggerMobileMenu("open"))
 }
 
 const Burger = () => {
-  const burgerWindow = useSelector(state => state.reducer.burgerWindow)
+  const mobileMenu = useSelector(state => state.reducer.mobileMenu)
   const dispatch = useDispatch()
-  return burgerWindow === "closed" ? (
+  return mobileMenu === "closed" ? (
     <Container onClick={() => dispatches(dispatch)}>
       <Line one></Line>
       <Line two></Line>
       <Line three></Line>
     </Container>
   ) : (
-    <Container onClick={() => dispatch(triggerBurgerWindow("closed"))}>
+    <Container onClick={() => dispatch(triggerMobileMenu("closed"))}>
       <Line one ex></Line>
       <Line three ex></Line>
     </Container>

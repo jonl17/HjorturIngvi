@@ -1,6 +1,6 @@
 import {
   SET_DEVICE,
-  TRIGGER_BURGER_WINDOW,
+  TRIGGER_MOBILE_MENU,
   SET_CURRENT_PAGE,
   CHANGE_LANGUAGE,
   PLAY_PAUSE,
@@ -10,7 +10,7 @@ import {
 
 const initialState = {
   device: undefined,
-  burgerWindow: "closed",
+  mobileMenu: "closed",
   currentPage: undefined,
   icelandic: false,
   play: false,
@@ -32,8 +32,8 @@ export default (state = initialState, action) => {
         device = `browser`
       }
       return { ...state, device: device }
-    case TRIGGER_BURGER_WINDOW:
-      return { ...state, burgerWindow: action.trigger }
+    case TRIGGER_MOBILE_MENU:
+      return { ...state, mobileMenu: action.trigger }
     case SET_CURRENT_PAGE:
       return { ...state, currentPage: action.page }
     case CHANGE_LANGUAGE:

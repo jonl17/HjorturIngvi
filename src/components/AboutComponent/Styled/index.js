@@ -4,7 +4,7 @@ export const Container = styled.div``
 
 export const Content = styled.div`
   position: relative;
-  width: 500px;
+  width: 100%;
   line-height: 152%;
   margin: auto;
   display: flex;
