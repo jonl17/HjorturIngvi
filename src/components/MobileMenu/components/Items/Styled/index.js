@@ -10,7 +10,7 @@ export const Container = styled.div`
   text-align: center;
 `
 export const List = styled.div`
-  padding-top: 40px;
+  padding-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
