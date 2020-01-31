@@ -6,10 +6,10 @@ export const Container = styled.div`
   position: fixed;
   display: inline-block;
   left: 75px;
-  bottom: 52%;
+  bottom: 51%;
   height: 23px;
   width: 340px;
-  transform: translateX(-180px) rotate(-90deg);
+  transform: translateX(-175px) rotate(-90deg);
   ${props =>
     props.home &&
     css`

@@ -1,7 +1,8 @@
 import React from "react"
-import { connect } from "react-redux"
-import { setDevice } from "../state/action"
+import { useDispatch, useSelector } from "react-redux"
+import { SET_DEVICE } from "../state/action"
 import { GlobalStyle } from "../components/GlobalStyle"
+import { useEffect } from "react"
 import "./fonts.css"
 
 /** components */
@@ -13,47 +14,50 @@ import Homebutton from "../components/Homebutton"
 import Footer from "../components/Footer"
 import ProfilePicture from "../components/ProfilePicture"
 import Player from "../components/Player"
+import Burger from "../components/Burger"
+import MobileMenu from "../components/MobileMenu"
 
-class Layout extends React.Component {
-  constructor(props) {
-    super(props)
-    this.callBack = this.callBack.bind(this)
+const Layout = ({ children, location }) => {
+  const device = useSelector(state => state.reducer.device)
+  const dispatch = useDispatch()
+  const callBack = () => {
+    dispatch({ type: SET_DEVICE, width: window.innerWidth })
   }
-  componentDidMount() {
-    this.callBack()
-    window.addEventListener("resize", this.callBack)
-    /** register current page */
-  }
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.callBack)
-  }
-  callBack() {
-    const { dispatch } = this.props
-    dispatch(setDevice(window.innerWidth))
-  }
-  render() {
-    return (
-      <>
-        <SEO></SEO>
-        <GlobalStyle></GlobalStyle>
-        <Container>
-          <Header></Header>
-          <Player></Player>
-          <PageContainer>{this.props.children}</PageContainer>
-          <ProfilePicture></ProfilePicture>
-          <SidebarContainer>
-            <Sidebar></Sidebar>
-            <Homebutton pathname={this.props.location.pathname}></Homebutton>
-          </SidebarContainer>
-        </Container>
-        <Footer></Footer>
-      </>
-    )
-  }
+  useEffect(() => {
+    callBack()
+    window.addEventListener("resize", callBack)
+    return () => {
+      window.removeEventListener("resize", callBack)
+    }
+  })
+  return (
+    <>
+      <SEO></SEO>
+      <GlobalStyle></GlobalStyle>
+      <Container>
+        <Player></Player>
+        <PageContainer device={device}>{children}</PageContainer>
+        {device === `browser` ? (
+          // only on browser
+          <>
+            <Header></Header>
+            <ProfilePicture></ProfilePicture>
+            <SidebarContainer>
+              <Sidebar></Sidebar>
+              <Homebutton pathname={location.pathname}></Homebutton>
+            </SidebarContainer>
+          </>
+        ) : (
+          // only on tablet & mobile
+          <>
+            <Burger></Burger>
+            <MobileMenu></MobileMenu>
+          </>
+        )}
+      </Container>
+      {device === `browser` ? <Footer></Footer> : <></>}
+    </>
+  )
 }
 
-const mapStateToProps = state => ({
-  device: state.reducer.device,
-})
-
-export default connect(mapStateToProps)(Layout)
+export default Layout

@@ -20,7 +20,8 @@ const ProfilePicture = ({
   },
 }) => {
   const currentPage = useSelector(state => state.reducer.currentPage)
-  return (
+  const device = useSelector(state => state.reducer.device)
+  return device === `browser` ? (
     <Container>
       <Image
         fluid={
@@ -32,6 +33,8 @@ const ProfilePicture = ({
         }
       ></Image>
     </Container>
+  ) : (
+    <></>
   )
 }
 

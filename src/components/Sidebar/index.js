@@ -18,6 +18,8 @@ const Sidebar = ({
   },
 }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
+  const device = useSelector(state => state.reducer.device)
+  console.log(device)
   const dispatch = useDispatch()
   return (
     <Container>

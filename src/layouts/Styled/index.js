@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { COLORS } from "../../constants"
 
 export const Container = styled.div`
@@ -13,10 +13,16 @@ export const Container = styled.div`
   align-content: center;
 `
 export const PageContainer = styled.div`
-  padding-top: 130px;
-  padding-bottom: 100px;
   height: 100%;
-  width: 500px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 150px 15px 100px 15px;
+  ${props =>
+    props.device === `browser` &&
+    css`
+      width: 500px;
+      padding: 130px 0px 100px 0px;
+    `}
 `
 export const SidebarContainer = styled.div`
   height: 100vh;

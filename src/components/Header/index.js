@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import { useSelector } from "react-redux"
 
 /* components */
 import { Container, Text, Anchor, Underline } from "./Styled"
@@ -11,7 +12,8 @@ const Header = ({
     },
   },
 }) => {
-  return (
+  const device = useSelector(state => state.reducer.device)
+  return device === `browser` ? (
     <Container>
       {pages.map((item, index) =>
         item.position === `header` ? (
@@ -26,7 +28,9 @@ const Header = ({
         )
       )}
     </Container>
-  )
+  ) : (
+    <></>
+  ) /** hide this menu on tablet & mobile */
 }
 
 export default props => (

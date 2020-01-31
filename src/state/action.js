@@ -3,9 +3,9 @@ export const setDevice = width => ({
   type: SET_DEVICE,
   width,
 })
-export const TRIGGER_BURGER_WINDOW = "TRIGGER_BURGER_WINDOW"
-export const triggerBurgerWindow = trigger => ({
-  type: TRIGGER_BURGER_WINDOW,
+export const TRIGGER_MOBILE_MENU = "TRIGGER_MOBILE_MENU"
+export const triggerMobileMenu = trigger => ({
+  type: TRIGGER_MOBILE_MENU,
   trigger,
 })
 export const SET_CURRENT_PAGE = "SET_CURRENT_PAGE"

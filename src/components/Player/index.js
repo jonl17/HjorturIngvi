@@ -32,6 +32,7 @@ const Player = ({
 }) => {
   // store variables
   const play = useSelector(state => state.reducer.play)
+  const device = useSelector(state => state.reducer.device)
 
   const dispatch = useDispatch()
 
@@ -57,7 +58,7 @@ const Player = ({
   }, [dispatch])
 
   return (
-    <Container>
+    <Container device={device}>
       {!play ? (
         <PlayButtonContainer
           onClick={() => {
