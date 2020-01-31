@@ -1,14 +1,9 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import { useSelector, useDispatch } from "react-redux"
-import { changeLanguage } from "../../state/action"
 
 /* components */
-import { Container, Text, Anchor, Underline, Button, Lang } from "./Styled"
-
-const SplitLanguageText = text => {
-  return text.split("/")
-}
+import { Container, Text, Anchor, Underline } from "./Styled"
+import LanguageButton from "../LanguageButton"
 
 const Sidebar = ({
   data: {
@@ -17,10 +12,6 @@ const Sidebar = ({
     },
   },
 }) => {
-  const icelandic = useSelector(state => state.reducer.icelandic)
-  const device = useSelector(state => state.reducer.device)
-  console.log(device)
-  const dispatch = useDispatch()
   return (
     <Container>
       {pages.map((item, index) =>
@@ -36,27 +27,7 @@ const Sidebar = ({
                 {item.name}
               </Anchor>
             ) : (
-              <Button
-                onClick={() => dispatch(changeLanguage())}
-                className="reg"
-              >
-                {SplitLanguageText(item.name).map((item, index) =>
-                  index === 1 ? (
-                    <span key={index}>
-                      <Lang> / </Lang>{" "}
-                      <Lang selected={!icelandic} key={index}>
-                        {item}
-                      </Lang>
-                      {/* ENGLISH */}
-                    </span>
-                  ) : (
-                    <Lang selected={icelandic} key={index}>
-                      {item}
-                    </Lang>
-                    /* ICELANDIC */
-                  )
-                )}
-              </Button>
+              <LanguageButton name={item.name}></LanguageButton>
             )}
           </Text>
         ) : (

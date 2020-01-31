@@ -30,6 +30,11 @@ export const PageContainer = styled.div`
       width: 500px;
       padding: 130px 0px 100px 0px;
     `}
+  ${props =>
+    props.mobileMenu === `open` &&
+    css`
+      filter: blur(3px);
+    `}
 `
 export const SidebarContainer = styled.div`
   height: 100vh;

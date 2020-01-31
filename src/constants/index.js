@@ -4,6 +4,7 @@ export const COLORS = {
   black: "#323232",
   background: "#E5E5E5",
   blue: `#0031B0`,
+  blueRGBA: `rgba(0,71,155,0.8)`,
 }
 export const STYLES = {
   title: css`

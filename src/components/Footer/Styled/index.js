@@ -10,7 +10,7 @@ export const Container = styled.div`
   margin-left: -250px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   box-sizing: border-box;
 `
 export const Anchor = styled.a`
@@ -25,7 +25,7 @@ export const Anchor = styled.a`
 `
 export const Text = styled.p`
   box-sizing: border-box;
-  padding-left: 15px;
+  padding-left: 10px;
   margin: 0;
 `
 export const Circle = styled.span`

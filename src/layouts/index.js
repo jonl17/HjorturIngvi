@@ -19,6 +19,7 @@ import MobileMenu from "../components/MobileMenu"
 
 const Layout = ({ children, location }) => {
   const device = useSelector(state => state.reducer.device)
+  const mobileMenu = useSelector(state => state.reducer.mobileMenu)
   const dispatch = useDispatch()
   const callBack = () => {
     dispatch({ type: SET_DEVICE, width: window.innerWidth })
@@ -36,7 +37,9 @@ const Layout = ({ children, location }) => {
       <GlobalStyle></GlobalStyle>
       <Container device={device}>
         <Player></Player>
-        <PageContainer device={device}>{children}</PageContainer>
+        <PageContainer mobileMenu={mobileMenu} device={device}>
+          {children}
+        </PageContainer>
         {device === `browser` ? (
           // only on browser
           <>
