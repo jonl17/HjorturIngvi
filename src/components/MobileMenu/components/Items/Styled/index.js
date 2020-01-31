@@ -21,7 +21,7 @@ export const Anchor = styled(Link)`
 `
 export const Text = styled.p`
   font-size: 18px;
-  margin-top: 25px;
+  margin-top: 10px;
 `
 export const Title = styled.h1`
   font-size: 25px;
