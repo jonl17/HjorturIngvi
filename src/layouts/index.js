@@ -34,7 +34,7 @@ const Layout = ({ children, location }) => {
     <>
       <SEO></SEO>
       <GlobalStyle></GlobalStyle>
-      <Container>
+      <Container device={device}>
         <Player></Player>
         <PageContainer device={device}>{children}</PageContainer>
         {device === `browser` ? (

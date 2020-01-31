@@ -2,6 +2,13 @@ import styled, { css } from "styled-components"
 import { COLORS } from "../../constants"
 
 export const Container = styled.div`
+  transition: 0.2s ease-in-out;
+  opacity: 0;
+  ${props =>
+    props.device !== undefined &&
+    css`
+      opacity: 1;
+    `}
   box-sizing: border-box;
   background: ${COLORS.background};
   min-height: 100%;
