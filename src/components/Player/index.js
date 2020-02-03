@@ -83,7 +83,7 @@ const Player = ({
         <Name>{songtitle}</Name>
         <Time></Time>
       </TrackInfo>
-      <Audio preload ref={myPlayer} controls>
+      <Audio ref={myPlayer} controls>
         <source src={publicURL}></source>
       </Audio>
       <Line></Line>
