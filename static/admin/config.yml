@@ -4,8 +4,8 @@ backend:
 media_folder: "static/assets/images"
 public_folder: "images"
 
-# Verkefni
 collections:
+  # ABOUT
   - name: "about"
     label: "About"
     folder: "static/about"
@@ -19,6 +19,7 @@ collections:
       - { label: "Second Image", name: "second-image", widget: "image" }
       - { label: "Song title", name: "songtitle", widget: "string" }
       - { label: "Song", name: "song", widget: "file" }
+  # NEWS
   - name: "news"
     label: "News"
     folder: "static/news"
@@ -35,6 +36,7 @@ collections:
         }
       - { label: "Image", name: "image", widget: "image", required: false }
       - { label: "Content", name: "body", widget: "markdown" }
+  # CONCERTS
   - name: "concerts"
     label: "Concerts"
     folder: "static/concerts"
@@ -58,6 +60,7 @@ collections:
           required: false,
           hint: "T.d. miði.is",
         }
+  # CONTACT
   - name: "contact"
     label: "Contact"
     folder: "static/contact"
@@ -68,3 +71,13 @@ collections:
       - { label: "Title", name: "title", widget: "string", default: "Contact" }
       - { label: "Email", name: "email", widget: "string" }
       - { label: "Telephone", name: "telephone", widget: "string" }
+  # PROJECTS
+  - name: "projects"
+    label: "Projects"
+    folder: "static/projects"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
