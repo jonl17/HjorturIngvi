@@ -27,6 +27,7 @@ const Layout = ({ children, location }) => {
   useEffect(() => {
     callBack()
     window.addEventListener("resize", callBack)
+    console.log("callback")
     return () => {
       window.removeEventListener("resize", callBack)
     }

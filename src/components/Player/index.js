@@ -55,7 +55,7 @@ const Player = ({
       }
     }, 1000)
     return () => clearInterval(interval)
-  }, [dispatch])
+  })
 
   return (
     <Container device={device}>
@@ -83,7 +83,7 @@ const Player = ({
         <Name>{songtitle}</Name>
         <Time></Time>
       </TrackInfo>
-      <Audio ref={myPlayer} controls>
+      <Audio preload ref={myPlayer} controls>
         <source src={publicURL}></source>
       </Audio>
       <Line></Line>
