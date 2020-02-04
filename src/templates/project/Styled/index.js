@@ -32,7 +32,6 @@ export const Content = styled.div`
     position: relative;
   }
 `
-export const BackButton = styled.div``
 
 export const Image = styled(Img)`
   height: 25px;

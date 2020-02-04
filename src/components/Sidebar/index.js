@@ -19,6 +19,7 @@ const Sidebar = ({
           <Text key={index}>
             {item.type !== `button` ? (
               <Anchor
+                partiallyActive={true}
                 activeClassName="selected"
                 className="bold"
                 to={item.slug}

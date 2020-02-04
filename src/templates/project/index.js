@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
 
+// COMPLEX COMPONENT THAT NEEDS CLEANING
+
 /** components */
 import { Container, Content, Title } from "./Styled"
+import Head from "./components/Head"
 
 const Project = ({
   data: {
@@ -71,6 +74,7 @@ const Project = ({
   })
   return (
     <Container>
+      <Head title={"Projects"} slug={"/projects/"}></Head>
       <Title>{title}</Title>
       <Content dangerouslySetInnerHTML={{ __html: html }}></Content>
     </Container>
