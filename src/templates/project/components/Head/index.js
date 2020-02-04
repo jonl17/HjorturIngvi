@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import { useSelector } from "react-redux"
 
 /** components */
 import { Title, Image, Anchor } from "./Styled"
@@ -12,8 +13,9 @@ const Head = ({
   slug, // where to go back
 }) => {
   // Template page title + back button to main page
+  const device = useSelector(state => state.reducer.device)
   return (
-    <Anchor to={slug}>
+    <Anchor device={device} to={slug}>
       <Image fluid={fluid}></Image>
       <Title className="bold">{title}</Title>
     </Anchor>

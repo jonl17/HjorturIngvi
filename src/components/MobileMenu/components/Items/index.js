@@ -28,6 +28,7 @@ const Items = ({
                   dispatch({ type: TRIGGER_MOBILE_MENU, trigger: `closed` })
                 }
                 activeStyle={{ color: "white" }}
+                partiallyActive={true}
                 className="bold"
                 to={page.slug}
               >

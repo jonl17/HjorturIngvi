@@ -19,7 +19,6 @@ export const Content = styled.div`
     margin-left: 0 !important;
     transition: 0.2s ease-in-out;
   }
-
   p > .plus {
     position: absolute;
     left: -85px;
@@ -30,6 +29,17 @@ export const Content = styled.div`
   }
   p {
     position: relative;
+  }
+  @media only screen and (max-width: 600px) {
+    p > .gatsby-resp-image-wrapper {
+      width: 100% !important;
+      margin-left: 0px !important;
+      transition: 0.2s ease-in-out;
+    }
+
+    p > .plus {
+      display: none;
+    }
   }
 `
 

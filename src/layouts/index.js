@@ -36,13 +36,13 @@ const Layout = ({ children, location }) => {
       <SEO></SEO>
       <GlobalStyle></GlobalStyle>
       <Container device={device}>
-        <Player></Player>
         <PageContainer mobileMenu={mobileMenu} device={device}>
           {children}
         </PageContainer>
         {device === `browser` ? (
           // only on browser
           <>
+            <Player></Player>
             <Header></Header>
             <ProfilePicture></ProfilePicture>
             <SidebarContainer>
