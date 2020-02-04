@@ -75,7 +75,7 @@ const Project = ({
   return (
     <Container>
       <Head title={"Projects"} slug={"/projects/"}></Head>
-      <Title>{title}</Title>
+      <Title className="bold">{title}</Title>
       <Content dangerouslySetInnerHTML={{ __html: html }}></Content>
     </Container>
   )

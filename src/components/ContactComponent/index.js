@@ -8,11 +8,11 @@ const Contactcomponent = ({ contactInfo: { email, telephone } }) => {
     <>
       <Container>
         <Name>Email</Name>
-        <Info>{email}</Info>
+        <Info className="bold">{email}</Info>
       </Container>
       <Container>
         <Name>Telephone</Name>
-        <Info>{telephone}</Info>
+        <Info className="bold">{telephone}</Info>
       </Container>
     </>
   )

@@ -23,7 +23,7 @@ export const Content = styled.div`
   p > .plus {
     position: absolute;
     left: -85px;
-    top: 35%;
+    top: 30px;
   }
   p > .plus:hover {
     cursor: pointer;
