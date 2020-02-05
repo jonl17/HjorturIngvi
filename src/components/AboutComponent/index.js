@@ -6,7 +6,7 @@ import { useSelector } from "react-redux"
 import { Content } from "./Styled"
 
 const splitTextIntoLanguage = text => {
-  return text.split("-ENSKA-")
+  return text.split("<p>-ENSKA-</p>")
 }
 
 const AboutComponent = ({

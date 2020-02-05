@@ -80,7 +80,7 @@ const Player = ({
         </StopButtonContainer>
       )}
       <TrackInfo>
-        <Name>{songtitle}</Name>
+        <Name className="bold">{songtitle}</Name>
         <Time></Time>
       </TrackInfo>
       <Audio ref={myPlayer} controls>

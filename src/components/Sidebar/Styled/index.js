@@ -5,14 +5,14 @@ export const Container = styled.div`
   position: fixed;
   bottom: 0;
   box-sizing: border-box;
-  padding: 0 75px 45px 75px;
+  padding: 0 75px 21px 75px;
 `
 export const Text = styled.p`
   display: flex;
   align-items: flex-end;
   position: relative;
   height: 100%;
-  padding-top: 1em;
+  padding-top: 2em;
   .selected > span {
     width: 100% !important;
   }

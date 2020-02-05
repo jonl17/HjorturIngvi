@@ -9,7 +9,7 @@ export const Container = styled.div`
   bottom: 51%;
   height: 23px;
   width: 340px;
-  transform: translateX(-175px) rotate(-90deg);
+  transform: translateX(-162px) rotate(-90deg);
   ${props =>
     props.home &&
     css`
@@ -21,12 +21,12 @@ export const Container = styled.div`
 `
 export const Text = styled.h1`
   text-align: center;
-  font-size: 22px;
-  ${props =>
-    props.subtitle &&
-    css`
-      font-size: 16px;
-    `}
+  font-size: 21px;
+  margin: 0px;
+`
+export const Subtitle = styled.p`
+  text-align: center;
+  margin: 7.5px;
 `
 export const Anchor = styled(Link)`
   text-decoration: none;

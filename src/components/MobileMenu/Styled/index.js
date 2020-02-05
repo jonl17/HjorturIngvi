@@ -7,7 +7,7 @@ export const Container = styled.div`
   left: 0;
   height: 100%;
   width: 100%;
-  background: ${COLORS.blueRGBA};
+  background: ${COLORS.blue};
   overflow: hidden;
   transition: 0.2s ease-in-out;
   /** closed */

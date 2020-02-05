@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { useDispatch } from "react-redux"
 
 /* components */
-import { Container, Anchor, Text } from "./Styled"
+import { Container, Anchor, Text, Subtitle } from "./Styled"
 import { SET_CURRENT_PAGE } from "../../state/action"
 
 const Homebutton = ({
@@ -20,9 +20,7 @@ const Homebutton = ({
     <Container home={pathname === "/"}>
       <Anchor to="/" className="bold">
         <Text className="bold">{title}</Text>
-        <Text className="light" subtitle>
-          {subtitle}
-        </Text>
+        <Subtitle>{subtitle}</Subtitle>
       </Anchor>
     </Container>
   )

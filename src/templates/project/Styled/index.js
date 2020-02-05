@@ -1,10 +1,13 @@
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { STYLES } from "../../../constants"
 
 export const Container = styled.div``
-export const Title = styled.h1``
+export const Title = styled.h1`
+  margin-top: 5px;
+`
 export const Content = styled.div`
-  line-height: 152%;
+  line-height: ${STYLES.lineHeight};
   padding-bottom: 15px;
   a {
     text-decoration: none;

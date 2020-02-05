@@ -11,11 +11,11 @@ export const GlobalStyle = createGlobalStyle`
     .readText {
         color: gray;
     }
-    ::selection {
-        background: transparent;
-        color: ${COLORS.blue};
-    }
+   
     h1 {
-        font-size: 22px;
+        font-size: 23px;
+    }
+    p {
+        font-size: 14px;
     }
 `

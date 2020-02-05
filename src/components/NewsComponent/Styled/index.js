@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { STYLES } from "../../../constants"
 
 export const Container = styled.div`
   padding: 15px 0 15px 0;
@@ -11,7 +12,7 @@ export const Title = styled.h1`
 `
 export const Content = styled.div`
   border-bottom: 1px solid;
-  line-height: 152%;
+  line-height: ${STYLES.lineHeight};
   padding-bottom: 15px;
   a {
     text-decoration: none;

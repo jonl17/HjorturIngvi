@@ -2,7 +2,7 @@ import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 
 /* components */
-import { Container, Anchor, Text, Circle } from "./Styled"
+import { Container, Anchor, Text } from "./Styled"
 
 const Footer = ({
   data: {
@@ -15,7 +15,6 @@ const Footer = ({
     <Container>
       {socialMedia.map((item, index) => (
         <Anchor key={index} target="_blank" href={item.link}>
-          <Circle></Circle>
           <Text className="bold">{item.name}</Text>
         </Anchor>
       ))}

@@ -17,7 +17,7 @@ const Time = () => {
 
   let timeInMs = duration - currentTime
   return !isNaN(timeInMs) ? (
-    <Text>{convertToReadableTime(timeInMs)}</Text>
+    <Text className="bold">{convertToReadableTime(timeInMs)}</Text>
   ) : (
     <></>
   )
