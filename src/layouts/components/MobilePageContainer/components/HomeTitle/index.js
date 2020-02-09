@@ -3,7 +3,7 @@ import { Title, Subtitle, Anchor, Box } from "./Styled"
 
 /** tech */
 import React from "react"
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { TRIGGER_MOBILE_MENU } from "../../../../../state/action"
 import { StaticQuery, graphql } from "gatsby"
 
@@ -15,9 +15,10 @@ const HomeTitle = ({
   },
 }) => {
   const dispatch = useDispatch()
+  const mobileMenu = useSelector(state => state.reducer.mobileMenu)
   return (
-    <Box>
-      <Title>
+    <Box position={mobileMenu === "open" ? "fixed" : "absolute"}>
+      <Title className="bold">
         <Anchor
           onClick={() =>
             dispatch({ type: TRIGGER_MOBILE_MENU, trigger: `closed` })

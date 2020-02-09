@@ -6,4 +6,5 @@ export const Image = styled(Img)`
   position: absolute !important;
   width: 100%;
   left: 0;
+  max-height: 500px;
 `

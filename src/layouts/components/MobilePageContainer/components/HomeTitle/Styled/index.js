@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 export const Box = styled.div`
   width: 200px;
-  position: absolute;
+  position: ${props => props.position};
   top: 40px;
   z-index: 10;
 `
