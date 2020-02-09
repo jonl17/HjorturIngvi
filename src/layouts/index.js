@@ -16,10 +16,10 @@ import ProfilePicture from "../components/ProfilePicture"
 import Player from "../components/Player"
 import Burger from "../components/Burger"
 import MobileMenu from "../components/MobileMenu"
+import MobilePageContainer from "./components/MobilePageContainer"
 
 const Layout = ({ children, location }) => {
   const device = useSelector(state => state.reducer.device)
-  const mobileMenu = useSelector(state => state.reducer.mobileMenu)
   const dispatch = useDispatch()
   const callBack = () => {
     dispatch({ type: SET_DEVICE, width: window.innerWidth })
@@ -36,9 +36,6 @@ const Layout = ({ children, location }) => {
       <SEO></SEO>
       <GlobalStyle></GlobalStyle>
       <Container device={device}>
-        <PageContainer mobileMenu={mobileMenu} device={device}>
-          {children}
-        </PageContainer>
         {device === `browser` ? (
           // only on browser
           <>
@@ -56,6 +53,13 @@ const Layout = ({ children, location }) => {
             <Burger></Burger>
             <MobileMenu></MobileMenu>
           </>
+        )}
+        {device === `browser` ? (
+          <PageContainer device={device}>{children}</PageContainer>
+        ) : (
+          <MobilePageContainer location={location}>
+            {children}
+          </MobilePageContainer>
         )}
       </Container>
       {device === `browser` ? <Footer></Footer> : <></>}

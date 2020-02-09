@@ -13,6 +13,7 @@ export const Container = styled.div`
   /** closed */
   opacity: 0;
   pointer-events: none;
+  z-index: 8;
   /** open */
   ${props =>
     props.open &&

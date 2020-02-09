@@ -21,20 +21,15 @@ export const Container = styled.div`
 `
 export const PageContainer = styled.div`
   height: 100%;
+  box-sizing: border-box;
+  width: 500px;
+  padding: 130px 0px 100px 0px;
+`
+export const MobilePageContainer = styled.div`
+  height: 100%;
   width: 100%;
   box-sizing: border-box;
   padding: 150px 15px 100px 15px;
-  ${props =>
-    props.device === `browser` &&
-    css`
-      width: 500px;
-      padding: 130px 0px 100px 0px;
-    `}
-  ${props =>
-    props.mobileMenu === `open` &&
-    css`
-      filter: blur(3px);
-    `}
 `
 export const SidebarContainer = styled.div`
   height: 100vh;

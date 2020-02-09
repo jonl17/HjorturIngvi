@@ -4,21 +4,19 @@ import { useDispatch } from "react-redux"
 import { TRIGGER_MOBILE_MENU } from "../../../../state/action"
 
 /** components */
-import { Container, Text, Anchor, List, Title, Subtitle } from "./Styled"
+import { Container, Text, Anchor, List } from "./Styled"
 import LanguageButton from "../../../LanguageButton"
 
 const Items = ({
   data: {
     site: {
-      siteMetadata: { pages, title, subtitle },
+      siteMetadata: { pages },
     },
   },
 }) => {
   const dispatch = useDispatch()
   return (
     <Container>
-      <Title>{title}</Title>
-      <Subtitle>{subtitle}</Subtitle>
       <List>
         {pages.map((page, index) => (
           <Text key={index}>
@@ -50,8 +48,6 @@ export default props => (
       {
         site {
           siteMetadata {
-            title
-            subtitle
             pages {
               name
               slug
