@@ -22,3 +22,11 @@ export const Container = styled.div`
       pointer-events: all;
     `}
 `
+export const SocialMediaContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 75px;
+`

@@ -1,11 +1,11 @@
 ---
 to: src/components/<%=title%>/index.js
 ---
-
-import React from 'react'
-
 /* components */
 import { Container } from "./Styled"
+
+/* tech */
+import React from 'react'
 
 
 const <%= h.capitalize(title) %> = () => {

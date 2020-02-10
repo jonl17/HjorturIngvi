@@ -1,41 +1,15 @@
 import React from "react"
-import { graphql, StaticQuery } from "gatsby"
 
 /* components */
-import { Container, Anchor, Text } from "./Styled"
+import { Container } from "./Styled"
+import SocialMediaLinks from "../SocialMediaLinks"
 
-const Footer = ({
-  data: {
-    site: {
-      siteMetadata: { socialMedia },
-    },
-  },
-}) => {
+const Footer = () => {
   return (
     <Container>
-      {socialMedia.map((item, index) => (
-        <Anchor key={index} target="_blank" href={item.link}>
-          <Text className="bold">{item.name}</Text>
-        </Anchor>
-      ))}
+      <SocialMediaLinks></SocialMediaLinks>
     </Container>
   )
 }
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        site {
-          siteMetadata {
-            socialMedia {
-              name
-              link
-            }
-          }
-        }
-      }
-    `}
-    render={data => <Footer data={data} {...props}></Footer>}
-  ></StaticQuery>
-)
+export default Footer
