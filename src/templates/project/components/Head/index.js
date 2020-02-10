@@ -14,11 +14,13 @@ const Head = ({
 }) => {
   // Template page title + back button to main page
   const device = useSelector(state => state.reducer.device)
-  return (
+  return device === `browser` ? (
     <Anchor device={device} to={slug}>
       <Image fluid={fluid}></Image>
       <Title className="bold">{title}</Title>
     </Anchor>
+  ) : (
+    <></>
   )
 }
 

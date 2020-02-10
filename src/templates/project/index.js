@@ -72,6 +72,7 @@ const Project = ({
       }
     }
   })
+
   return (
     <Container>
       <Head title={"Projects"} slug={"/projects/"}></Head>

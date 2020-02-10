@@ -1,4 +1,6 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
+import Img from "gatsby-image"
 
 export const Container = styled.div`
   height: 100%;
@@ -28,4 +30,15 @@ export const Underline = styled.span`
   bottom: 0;
   left: 0;
   bottom: -15px;
+`
+export const Anchor = styled(Link)`
+  text-decoration: none;
+  color: inherit;
+`
+export const Image = styled(Img)`
+  position: absolute !important;
+  left: -35px;
+  height: 35px;
+  width: 35px;
+  top: -5px;
 `
