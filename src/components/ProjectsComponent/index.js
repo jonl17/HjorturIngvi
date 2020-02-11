@@ -12,16 +12,11 @@ const ProjectsComponent = ({ projects }) => {
     <Text key={index}>
       <Anchor
         className="bold"
-        to={
-          "/projects/" +
-          slugify(
-            !icelandic && project.frontmatter.title_en
-              ? project.frontmatter.title_en
-              : project.frontmatter.title
-          )
-        }
+        to={"/projects/" + slugify(project.frontmatter.title)}
       >
-        {project.frontmatter.title}
+        {!icelandic && project.frontmatter.title_en
+          ? project.frontmatter.title_en
+          : project.frontmatter.title}
       </Anchor>
     </Text>
   ))
