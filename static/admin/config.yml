@@ -97,5 +97,10 @@ collections:
         name: "services"
         widget: "list"
         fields:
-          - { label: "Name", name: "servicename", widget: "string" }
+          - label: "Name"
+            name: "servicename"
+            widget: "select"
+            options:
+              ["Spotify", "Youtube", "Facebook", "Soundcloud", "Instagram"]
+            default: ["Spotify"]
           - { label: "URL", name: "serviceurl", widget: "string" }
