@@ -6,7 +6,7 @@ export const Container = styled.div`
   width: 100%;
   box-sizing: border-box;
   margin: 150px auto;
-  padding: 35px 15px 100px 15px;
+  padding: 10px 15px 100px 15px;
   text-align: center;
 `
 export const List = styled.div`

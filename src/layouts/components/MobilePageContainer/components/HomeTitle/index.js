@@ -18,8 +18,9 @@ const HomeTitle = ({
   const mobileMenu = useSelector(state => state.reducer.mobileMenu)
   return (
     <Box position={mobileMenu === "open" ? "fixed" : "absolute"}>
-      <Title className="bold">
+      <Title>
         <Anchor
+          className="bold"
           onClick={() =>
             dispatch({ type: TRIGGER_MOBILE_MENU, trigger: `closed` })
           }
