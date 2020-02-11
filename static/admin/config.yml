@@ -87,7 +87,7 @@ collections:
   # EXTERNAL LINKS
   - name: "externallinks"
     label: "External links"
-    folder: "static/projects"
+    folder: "static/externallinks"
     editor:
       preview: false
     create: true
