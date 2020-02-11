@@ -4,8 +4,9 @@ import { useDispatch } from "react-redux"
 import { TRIGGER_MOBILE_MENU } from "../../../../state/action"
 
 /** components */
-import { Container, Text, Anchor, List } from "./Styled"
+import { Container, Text, Anchor, List, SocialMediaContainer } from "./Styled"
 import LanguageButton from "../../../LanguageButton"
+import SocialMediaLinks from "../../../SocialMediaLinks"
 
 const Items = ({
   data: {
@@ -19,24 +20,29 @@ const Items = ({
     <Container>
       <List>
         {pages.map((page, index) => (
-          <Text key={index}>
-            {page.type !== `button` ? (
-              <Anchor
-                onClick={() =>
-                  dispatch({ type: TRIGGER_MOBILE_MENU, trigger: `closed` })
-                }
-                activeStyle={{ color: "white" }}
-                partiallyActive={true}
-                className="bold"
-                to={page.slug}
-              >
-                {page.name}
-              </Anchor>
-            ) : (
-              <LanguageButton name={page.name}></LanguageButton>
-            )}
-          </Text>
+          <>
+            <Text key={index}>
+              {page.type !== `button` ? (
+                <Anchor
+                  onClick={() =>
+                    dispatch({ type: TRIGGER_MOBILE_MENU, trigger: `closed` })
+                  }
+                  activeStyle={{ color: "white" }}
+                  partiallyActive={true}
+                  className="bold"
+                  to={page.slug}
+                >
+                  {page.name}
+                </Anchor>
+              ) : (
+                <LanguageButton name={page.name}></LanguageButton>
+              )}
+            </Text>
+          </>
         ))}
+        <SocialMediaContainer>
+          <SocialMediaLinks></SocialMediaLinks>
+        </SocialMediaContainer>
       </List>
     </Container>
   )

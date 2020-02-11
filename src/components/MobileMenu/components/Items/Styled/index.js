@@ -30,3 +30,12 @@ export const Title = styled.h1`
 export const Subtitle = styled.p`
   margin: 10px;
 `
+export const SocialMediaContainer = styled.div`
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 75px;
+`
