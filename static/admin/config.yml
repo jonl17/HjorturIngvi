@@ -84,3 +84,17 @@ collections:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "English Title", name: "title_en", "string", required: false }
       - { label: "Content", name: "body", widget: "markdown" }
+  # EXTERNAL LINKS
+  - name: "externallinks"
+    label: "External links"
+    folder: "static/projects"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - label: "Services"
+        name: "services"
+        widget: "select"
+        multiple: true
+        options: ["Spotify", "Youtube", "Facebook", "Instagram", "Soundcloud"]
+        default: ["Spotify"]
