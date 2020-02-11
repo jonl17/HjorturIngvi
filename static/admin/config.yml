@@ -92,10 +92,14 @@ collections:
       preview: false
     create: true
     fields:
-      - { label: "Links", name: "title", widget: "string", default: "Links" }
+      - { label: "Title", name: "title", widget: "string" }
       - label: "Services"
         name: "services"
-        widget: "select"
-        multiple: true
-        options: ["Spotify", "Youtube", "Facebook", "Instagram", "Soundcloud"]
-        default: ["Spotify"]
+        widget: "list"
+        fields:
+          - label: Name
+            name: "servicename"
+            widget: "select"
+            options:
+              ["Spotify", "Youtube", "Facebook", "Instagram", "Soundcloud"]
+          - { label: URL, name: serviceurl, widget: "string" }
