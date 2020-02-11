@@ -92,6 +92,7 @@ collections:
       preview: false
     create: true
     fields:
+      - { label: "Links", name: "title", widget: "string", default: "Links" }
       - label: "Services"
         name: "services"
         widget: "select"
