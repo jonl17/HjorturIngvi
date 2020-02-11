@@ -7,6 +7,7 @@ const SEO = ({
     site: {
       siteMetadata: { title, subtitle: description },
     },
+    favicon: { publicURL },
   },
 }) => {
   return (
@@ -18,6 +19,7 @@ const SEO = ({
         {description && (
           <meta property="og:description" content={description} />
         )}
+        <link rel="icon" type="image/png" href={publicURL}></link>
       </Helmet>
     </>
   )
@@ -32,6 +34,9 @@ export default props => (
             title
             subtitle
           }
+        }
+        favicon: file(name: { eq: "stop" }) {
+          publicURL
         }
       }
     `}
