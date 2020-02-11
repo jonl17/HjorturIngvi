@@ -1,17 +1,20 @@
-import React, { useState, useEffect } from "react"
-import { graphql } from "gatsby"
-
-// COMPLEX COMPONENT THAT NEEDS CLEANING
-
 /** components */
 import { Container, Content, Title } from "./Styled"
 import Head from "./components/Head"
+
+/** tech */
+import React, { useState, useEffect } from "react"
+import { graphql } from "gatsby"
+import { useSelector } from "react-redux"
+import { splitTextIntoLanguage } from "../../methods"
+
+// COMPLEX COMPONENT THAT NEEDS CLEANING
 
 const Project = ({
   data: {
     markdownRemark: {
       html,
-      frontmatter: { title },
+      frontmatter: { title, title_en },
     },
     plus: {
       fluid: { src: plussrc },
@@ -73,11 +76,22 @@ const Project = ({
     }
   })
 
+  const icelandic = useSelector(state => state.reducer.icelandic)
+  const bothLanguages = splitTextIntoLanguage(html)
   return (
     <Container>
       <Head title={"Projects"} slug={"/projects/"}></Head>
-      <Title className="bold">{title}</Title>
-      <Content dangerouslySetInnerHTML={{ __html: html }}></Content>
+      <Title className="bold">
+        {!icelandic && title_en ? title_en : title}
+      </Title>
+      <Content
+        dangerouslySetInnerHTML={{
+          __html:
+            !icelandic && bothLanguages.length > 1
+              ? bothLanguages[1]
+              : bothLanguages[0],
+        }}
+      ></Content>
     </Container>
   )
 }
@@ -88,6 +102,7 @@ export const query = graphql`
       html
       frontmatter {
         title
+        title_en
       }
     }
     plus: imageSharp(fluid: { originalName: { eq: "plus.png" } }) {

@@ -1,13 +1,10 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { useSelector } from "react-redux"
+import { splitTextIntoLanguage } from "../../methods"
 
 /* components */
 import { Content } from "./Styled"
-
-const splitTextIntoLanguage = text => {
-  return text.split("<p>-ENSKA-</p>")
-}
 
 const AboutComponent = ({
   data: {

@@ -23,6 +23,7 @@ export default props => (
           nodes {
             frontmatter {
               title
+              title_en
             }
           }
         }

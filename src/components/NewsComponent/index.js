@@ -1,8 +1,10 @@
+/* components */
+import { Container } from "./Styled"
+import Item from "./components/Item"
+
+/** tech */
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-
-/* components */
-import { Container, Date, Title, Content } from "./Styled"
 
 const NewsComponent = ({
   data: {
@@ -11,9 +13,7 @@ const NewsComponent = ({
 }) => {
   return nodes.map((frett, index) => (
     <Container key={index}>
-      <Date className="bold">{frett.frontmatter.date}</Date>
-      <Title className="bold">{frett.frontmatter.title}</Title>
-      <Content dangerouslySetInnerHTML={{ __html: frett.html }}></Content>
+      <Item frett={frett}></Item>
     </Container>
   ))
 }
@@ -30,6 +30,7 @@ export default props => (
             html
             frontmatter {
               title
+              title_en
               date(formatString: "DD.MM.YYYY")
             }
           }
