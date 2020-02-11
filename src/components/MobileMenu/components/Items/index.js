@@ -20,25 +20,23 @@ const Items = ({
     <Container>
       <List>
         {pages.map((page, index) => (
-          <>
-            <Text key={index}>
-              {page.type !== `button` ? (
-                <Anchor
-                  onClick={() =>
-                    dispatch({ type: TRIGGER_MOBILE_MENU, trigger: `closed` })
-                  }
-                  activeStyle={{ color: "white" }}
-                  partiallyActive={true}
-                  className="bold"
-                  to={page.slug}
-                >
-                  {page.name}
-                </Anchor>
-              ) : (
-                <LanguageButton name={page.name}></LanguageButton>
-              )}
-            </Text>
-          </>
+          <Text key={index}>
+            {page.type !== `button` ? (
+              <Anchor
+                onClick={() =>
+                  dispatch({ type: TRIGGER_MOBILE_MENU, trigger: `closed` })
+                }
+                activeStyle={{ color: "white" }}
+                partiallyActive={true}
+                className="bold"
+                to={page.slug}
+              >
+                {page.name}
+              </Anchor>
+            ) : (
+              <LanguageButton name={page.name}></LanguageButton>
+            )}
+          </Text>
         ))}
         <SocialMediaContainer>
           <SocialMediaLinks></SocialMediaLinks>

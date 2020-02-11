@@ -18,7 +18,7 @@ import Burger from "../components/Burger"
 import MobileMenu from "../components/MobileMenu"
 import MobilePageContainer from "./components/MobilePageContainer"
 
-const Layout = ({ children, location }) => {
+const Layout = ({ children, location, pageContext }) => {
   const device = useSelector(state => state.reducer.device)
   const dispatch = useDispatch()
   const callBack = () => {
@@ -33,7 +33,7 @@ const Layout = ({ children, location }) => {
   })
   return (
     <>
-      <SEO></SEO>
+      <SEO projectTitle={pageContext.name}></SEO>
       <GlobalStyle></GlobalStyle>
       <Container device={device}>
         {device === `browser` ? (

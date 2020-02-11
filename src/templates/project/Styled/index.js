@@ -33,6 +33,9 @@ export const Content = styled.div`
   p {
     position: relative;
   }
+  .gatsby-resp-image-link {
+    pointer-events: none;
+  }
   @media only screen and (max-width: 600px) {
     p > .gatsby-resp-image-wrapper {
       width: 100% !important;

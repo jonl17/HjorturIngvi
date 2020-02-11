@@ -9,7 +9,6 @@ import { splitTextIntoLanguage } from "../../../../methods"
 const Item = ({ frett }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
   const bothLanguages = splitTextIntoLanguage(frett.html)
-  console.log(bothLanguages)
   return (
     <>
       <Date className="bold">{frett.frontmatter.date}</Date>

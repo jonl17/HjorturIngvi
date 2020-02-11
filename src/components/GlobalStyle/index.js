@@ -21,6 +21,7 @@ export const GlobalStyle = createGlobalStyle`
     @media only screen and (min-width: 1600px) {
         p {
             font-size: 18px;
+            line-height: 145%;
         }
     }
     @media only screen and (max-width: 600px) {

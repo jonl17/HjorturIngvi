@@ -35,6 +35,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: projectTemplate,
       context: {
         id: project.id,
+        name: project.frontmatter.title,
       },
     })
   })
