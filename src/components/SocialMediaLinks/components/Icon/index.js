@@ -8,6 +8,7 @@ const clean = originalName => {
 }
 const getCorrectIcon = (name, icons) => {
   for (var i = 0; i < icons.length; i++) {
+    // clean both, just in case...
     if (clean(name) === clean(icons[i].childImageSharp.fluid.originalName))
       return icons[i].childImageSharp
   }
