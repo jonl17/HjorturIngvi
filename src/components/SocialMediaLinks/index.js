@@ -1,20 +1,28 @@
 /* components */
 import { Anchor, Text } from "./Styled"
+import Icon from "./components/Icon"
 
 /* tech */
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import { useSelector } from "react-redux"
 
 const Socialmedialinks = ({
   data: {
-    site: {
-      siteMetadata: { socialMedia },
+    externallinks: {
+      frontmatter: { services },
     },
   },
 }) => {
-  return socialMedia.map((item, index) => (
-    <Anchor key={index} target="_blank" href={item.link}>
-      <Text className="bold">{item.name}</Text>
+  const device = useSelector(state => state.reducer.device)
+  return services.map((service, index) => (
+    <Anchor key={index} target="_blank" href={service.serviceurl}>
+      <Icon name={service.servicename}></Icon>
+      {device === `browser` ? (
+        <Text className="bold">{service.servicename}</Text>
+      ) : (
+        <></>
+      )}
     </Anchor>
   ))
 }
@@ -23,11 +31,13 @@ export default props => (
   <StaticQuery
     query={graphql`
       {
-        site {
-          siteMetadata {
-            socialMedia {
-              name
-              link
+        externallinks: markdownRemark(
+          fileAbsolutePath: { regex: "/externallinks/" }
+        ) {
+          frontmatter {
+            services {
+              servicename
+              serviceurl
             }
           }
         }
