@@ -1,5 +1,6 @@
 ---
 title: '24 myndir: Akureyri'
+title_en: '24 pictures: Akureyri'
 venue: Hof Akureyri
 date: 2020-09-14T14:10:24.923Z
 ticketsrequired: true
