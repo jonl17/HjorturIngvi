@@ -12,7 +12,7 @@ const initialState = {
   device: undefined,
   mobileMenu: "closed",
   currentPage: undefined,
-  icelandic: true,
+  icelandic: false,
   play: false,
   duration: undefined,
   currentTime: undefined,
