@@ -1,6 +1,6 @@
 ---
 title: Contact
-email: hjorturi@gmail.com
-telephone: '+354 898 4930 '
+email: hjorturimusic@gmail.com
+telephone: +354 823 8059
 ---
 
