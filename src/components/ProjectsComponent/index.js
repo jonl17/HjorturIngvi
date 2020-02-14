@@ -8,6 +8,7 @@ import { useSelector } from "react-redux"
 
 const ProjectsComponent = ({ projects }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
+
   return projects.map((project, index) => (
     <Text key={index}>
       <Anchor
