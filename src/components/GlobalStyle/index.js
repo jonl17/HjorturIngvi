@@ -7,15 +7,12 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
         background: ${COLORS.background};
     }
-    * {
-        letter-spacing: -.2px;
-    }
     .readText {
         color: gray;
     }
-   
     h1 {
         font-size: 23px;
+        letter-spacing: -.2px;
     }
     p {
         font-size: 14px;
