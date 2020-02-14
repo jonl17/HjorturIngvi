@@ -66,11 +66,18 @@ collections:
           required: false,
         }
       - {
+          label: "Buy ticket link",
+          name: "buyticketlink",
+          widget: "string",
+          required: false,
+          hint: "T.d. miði.is",
+        }
+      - {
           label: "Event link",
           name: "eventlink",
           widget: "string",
           required: false,
-          hint: "T.d. tix.is eða facebook event",
+          hint: "T.d. facebook event síða",
         }
   # CONTACT
   - name: "contact"
