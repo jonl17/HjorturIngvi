@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby"
 import { useSelector } from "react-redux"
 
 /* components */
-import { Container, Title, Venue, Date, TicketLink } from "./Styled"
+import { Container, Title, Venue, Date, TicketLink, Anchor } from "./Styled"
 
 const ConcertsComponent = ({
   data: {
@@ -13,20 +13,23 @@ const ConcertsComponent = ({
   const icelandic = useSelector(state => state.reducer.icelandic)
   return nodes.map((concert, index) => (
     <Container key={index}>
-      <Title className="bold">{concert.frontmatter.title}</Title>
-      <Venue>{concert.frontmatter.venue}</Venue>
-      <Date className="bold">{concert.frontmatter.date}</Date>
-      {concert.frontmatter.ticketsrequired ? (
-        <TicketLink
-          target="_blank"
-          href={concert.frontmatter.buyticketlink}
-          className="bold"
-        >
-          {icelandic ? "Kaupa miða" : "Buy tickets"}
-        </TicketLink>
-      ) : (
-        ""
-      )}
+      <Anchor
+        href={
+          concert.frontmatter.eventlink ? concert.frontmatter.eventlink : ""
+        }
+        target="_blank"
+      >
+        <Title className="bold">{concert.frontmatter.title}</Title>
+        <Venue>{concert.frontmatter.venue}</Venue>
+        <Date className="bold">{concert.frontmatter.date}</Date>
+        {concert.frontmatter.ticketsrequired ? (
+          <TicketLink className="bold">
+            {icelandic ? "Miða krafist" : "Tickets required"}
+          </TicketLink>
+        ) : (
+          ""
+        )}
+      </Anchor>
     </Container>
   ))
 }
@@ -46,6 +49,7 @@ export default props => (
               venue
               ticketsrequired
               buyticketlink
+              eventlink
             }
           }
         }

@@ -14,10 +14,14 @@ export const Venue = styled.p``
 export const Date = styled.p`
   font-size: 14px;
 `
-export const TicketLink = styled.a`
+export const TicketLink = styled.p`
   position: absolute;
   right: 0;
   bottom: 25px;
+  text-decoration: none;
+  color: inherit;
+`
+export const Anchor = styled.a`
   text-decoration: none;
   color: inherit;
 `

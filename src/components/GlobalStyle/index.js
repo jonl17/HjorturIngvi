@@ -17,6 +17,10 @@ export const GlobalStyle = createGlobalStyle`
     p {
         font-size: 14px;
     }
+    ::selection {
+        color: lightgray;
+        background: black;
+    }
     @media only screen and (min-width: 1600px) {
         p {
             font-size: 18px;

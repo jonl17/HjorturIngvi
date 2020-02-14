@@ -8,3 +8,7 @@ export const Container = styled.div`
 `
 export const Name = styled.p``
 export const Info = styled.h1``
+export const Anchor = styled.a`
+  text-decoration: none;
+  color: inherit;
+`

@@ -73,6 +73,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `cv`,
+        path: `${__dirname}/static/cv`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `externallinks`,
         path: `${__dirname}/static/externallinks`,
       },
