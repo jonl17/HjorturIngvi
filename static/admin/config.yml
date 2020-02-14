@@ -136,4 +136,9 @@ collections:
     create: true
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Content", name: "body", widget: "markdown" }
+      - {
+          label: "Content",
+          name: "body",
+          widget: "markdown",
+          hint: "Láttu ártal vera H1 tag og færslurnar Bulleted list",
+        }
