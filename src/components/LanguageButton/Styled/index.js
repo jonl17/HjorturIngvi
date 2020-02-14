@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 
 export const Button = styled.span`
   margin: 0;
@@ -8,9 +8,4 @@ export const Button = styled.span`
 `
 export const Lang = styled.span`
   opacity: 0.6;
-  ${props =>
-    props.selected &&
-    css`
-      opacity: 1;
-    `};
 `

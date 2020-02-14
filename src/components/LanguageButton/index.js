@@ -18,13 +18,13 @@ const Languagebutton = ({ name }) => {
         index === 1 ? (
           <span key={index}>
             <Lang> / </Lang>{" "}
-            <Lang selected={!icelandic} key={index}>
+            <Lang className={!icelandic ? "bold" : ""} key={index}>
               {item}
             </Lang>
             {/* ENGLISH */}
           </span>
         ) : (
-          <Lang selected={icelandic} key={index}>
+          <Lang className={icelandic ? "bold" : ""} key={index}>
             {item}
           </Lang>
           /* ICELANDIC */
