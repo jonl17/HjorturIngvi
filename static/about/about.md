@@ -1,7 +1,7 @@
 ---
 title: About
-forsidu-mynd: /images/hjortur.png
-second-image: /images/hjörtur-ingvi-jóhannsson.jpg
+forsidu-mynd: /images/hjortur_heimasida_2_2.jpg
+second-image: /images/hjortur_heimasida_1_1.jpg
 songtitle: '24. pictures: Cascade'
 song: /images/24 pictures Cascade.mp3
 ---
