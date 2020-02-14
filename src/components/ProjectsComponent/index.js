@@ -22,7 +22,7 @@ const ProjectsComponent = ({ projects }) => {
         </Anchor>
       </Text>
     ))
-  } else return <h1>Coming soon...</h1>
+  } else return <h1 className="bold">Coming soon...</h1>
 }
 
 export default ProjectsComponent
