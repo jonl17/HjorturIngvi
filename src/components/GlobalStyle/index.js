@@ -7,7 +7,9 @@ export const GlobalStyle = createGlobalStyle`
         height: 100%;
         background: ${COLORS.background};
     }
-
+    * {
+        letter-spacing: -.2px;
+    }
     .readText {
         color: gray;
     }
