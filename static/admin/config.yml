@@ -127,3 +127,13 @@ collections:
               ["Spotify", "Youtube", "Facebook", "Soundcloud", "Instagram"]
             default: ["Spotify"]
           - { label: "URL", name: "serviceurl", widget: "string" }
+  # CV
+  - name: "cv"
+    label: "CV"
+    folder: "static/cv"
+    editor:
+      preview: false
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Content", name: "body", widget: "markdown" }
