@@ -15,8 +15,4 @@ Talan 24 kemur víða fyrir, bæði í tónlist og annars staðar. Það eru 24 
 Hann er virkur píanóleikari, tónskáld og útsetjari, auk þess að kenna á píanó við Menntaskólann í Tónlist. Þá hefur hann unnið í leikhúsinu, en hann var t.a.m. tónlistarstjóri í Ronju Ræningjadóttur í Þjóðleikhúsinu á síiðasta leikári. Hjörtur lærði djasspíanóleik í Konservatoríunni í Amsterdam, þaðan sem hann útskrifaðist 2015.Þetta verkefni er styrkt af launasjóði tónlistarflytjenda.
 
 \
-Miðasala er á tix.is
-
-
-
-\-ENSKA-
+Miðasala er á [tix.is](https://tix.is/is/event/9729/24-myndir/)
