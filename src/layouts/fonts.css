@@ -1,10 +1,10 @@
 @font-face {
   font-family: "Grotesk Reg";
-  src: url("./assets/Format/grotesk_reg.ttf") format("truetype");
+  src: url("./assets/Format/grotesk_reg.otf");
 }
 @font-face {
   font-family: "Grotesk Fat";
-  src: url("./assets/Format/grotesk_fat.ttf");
+  src: url("./assets/Format/grotesk_fat.otf");
 }
 @font-face {
   font-family: "Grotesk Light";

@@ -8,8 +8,8 @@ const Contactcomponent = ({ contactInfo: { email, telephone } }) => {
     <>
       <Container>
         <Name>Email</Name>
-        <Info className="bold">
-          <Anchor target="_blank" href={"mailto:" + email}>
+        <Info>
+          <Anchor className="bold" target="_blank" href={"mailto:" + email}>
             {email}
           </Anchor>
         </Info>

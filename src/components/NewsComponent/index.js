@@ -32,6 +32,13 @@ export default props => (
               title
               title_en
               date(formatString: "DD.MM.YYYY")
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }

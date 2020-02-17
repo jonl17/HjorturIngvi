@@ -1,5 +1,5 @@
 /** components */
-import { Date, Title, Content } from "./Styled"
+import { Date, Title, Content, Image, ImageContainer } from "./Styled"
 
 /** tech */
 import React from "react"
@@ -17,6 +17,9 @@ const Item = ({ frett }) => {
           ? frett.frontmatter.title_en
           : frett.frontmatter.title}
       </Title>
+      <ImageContainer>
+        <Image fluid={frett.frontmatter.image.childImageSharp.fluid}></Image>
+      </ImageContainer>
       <Content
         dangerouslySetInnerHTML={{
           __html:
