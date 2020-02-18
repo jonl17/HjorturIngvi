@@ -1,6 +1,7 @@
 /** components */
-import { Date, Title, Image, ImageContainer } from "./Styled"
+import { Date, Title } from "./Styled"
 import Content from "../../../Content"
+import DynamicImage from "../../../DynamicImage"
 
 /** tech */
 import React from "react"
@@ -16,7 +17,12 @@ const Item = ({ frett }) => {
           ? frett.frontmatter.title_en
           : frett.frontmatter.title}
       </Title>
-      <Content title={frett.frontmatter.title} html={frett.html}></Content>
+      <DynamicImage image={frett.frontmatter.image}></DynamicImage>
+      <Content
+        htmlAst={frett.htmlAst}
+        title={frett.frontmatter.title}
+        html={frett.html}
+      ></Content>
     </>
   )
 }
