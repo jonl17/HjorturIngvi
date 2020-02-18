@@ -10,6 +10,8 @@ Góðar fréttir!
 
 Nú er fyrsta lagið í lagabálknum 24 myndir, Cascade, komið á Spotify og væntanlegt á allar helstu veitur. Næstu lög, Aries og Grow, eru svo væntanleg á næstu vikum.-
 
+[Cascade á Spotify](https://open.spotify.com/album/14JwzaZCI69RoCsYMYuB74?si=51-yi6jDSMyDWPBkAH7FKg)
+
 \-ENSKA-
 
 Good news! 
@@ -20,4 +22,4 @@ It quickly grew to include a song cycle, recorded in the studio, that I plan to 
 
 The first song, Cascade, is now on Spotify and is due to arrive at other platforms, such as itunes, and Amazon. The next songs, Aries and Grow will arrive in the coming weeks.
 
-spotify:album:14JwzaZCI69RoCsYMYuB74
+[Cascade on Spotify](https://open.spotify.com/album/14JwzaZCI69RoCsYMYuB74?si=51-yi6jDSMyDWPBkAH7FKg)
