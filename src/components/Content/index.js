@@ -28,20 +28,14 @@ const Content = ({
   const bothLanguages = splitTextIntoLanguage(html)
 
   const triggerImage = target => {
-    // first strip off the plusfor in plusforimageX & get correct image ID
     let imageID = target.id.replace("plusfor", "")
-    // find image with that ID
     let theImage = document.getElementById(imageID)
 
-    // change from plus to ex
     if (imageSize === "small") {
       setImageSize("large")
       console.log(document.getElementById("image1"))
-      theImage.style.width = "100% !important"
-      // maximize
+      document.getElementById("góðarfréttir!1").style.width = "100% !important"
     } else {
-      // minimize
-      // set image style
       setImageSize("small")
       theImage.style.width = "40% !important"
     }
@@ -51,19 +45,19 @@ const Content = ({
     setImages(document.getElementsByClassName("gatsby-resp-image-wrapper"))
   }, [])
 
-  if (images !== undefined) {
-    for (var i = 0; i < images.length; i++) {
-      // add id attr to image
-      let id = title + (i + 1)
-      images[i].setAttribute("id", id)
-      // append plus next to each image & prefix id of that plus with plusfor, resulting in id=plusforimageX
-      id = "plusfor" + id
-      images[i].insertAdjacentHTML(
-        "afterend",
-        "<Image class='plus' id=" + id + "  src=" + plussrc + "></Image>"
-      )
-    }
-  }
+  // if (images !== undefined) {
+  //   for (var i = 0; i < images.length; i++) {
+  //     // add id attr to image
+  //     let id = title.replace(/ /g, "").toLowerCase() + (i + 1)
+  //     images[i].setAttribute("id", id)
+  //     // append plus next to each image & prefix id of that plus with plusfor, resulting in id=plusforimageX
+  //     id = "plusfor" + id
+  //     images[i].insertAdjacentHTML(
+  //       "afterend",
+  //       "<Image class='plus' id=" + id + "  src=" + plussrc + "></Image>"
+  //     )
+  //   }
+  // }
   // get pluses
   useEffect(() => {
     setPluses(document.getElementsByClassName("plus"))

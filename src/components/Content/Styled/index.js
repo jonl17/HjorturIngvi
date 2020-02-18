@@ -15,10 +15,13 @@ export const Container = styled.div`
     font-family: "Grotesk fat";
   }
   p > .gatsby-resp-image-wrapper {
-    width: 40%;
+    width: 100%;
     margin-left: 0 !important;
     transition: 0.2s ease-in-out;
   }
+  /* p > .gatsby-resp-image-wrapper:hover {
+    width: 40%;
+  } */
   p > .plus {
     position: absolute;
     left: -85px;
