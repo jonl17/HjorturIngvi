@@ -1,14 +1,13 @@
 /** components */
-import { Date, Title, Content, Image, ImageContainer } from "./Styled"
+import { Date, Title, Image, ImageContainer } from "./Styled"
+import Content from "../../../Content"
 
 /** tech */
 import React from "react"
 import { useSelector } from "react-redux"
-import { splitTextIntoLanguage } from "../../../../methods"
 
 const Item = ({ frett }) => {
   const icelandic = useSelector(state => state.reducer.icelandic)
-  const bothLanguages = splitTextIntoLanguage(frett.html)
   return (
     <>
       <Date className="bold">{frett.frontmatter.date}</Date>
@@ -17,17 +16,7 @@ const Item = ({ frett }) => {
           ? frett.frontmatter.title_en
           : frett.frontmatter.title}
       </Title>
-      <ImageContainer>
-        <Image fluid={frett.frontmatter.image.childImageSharp.fluid}></Image>
-      </ImageContainer>
-      <Content
-        dangerouslySetInnerHTML={{
-          __html:
-            !icelandic && bothLanguages.length > 1
-              ? bothLanguages[1] // english
-              : bothLanguages[0], // icelandic
-        }}
-      ></Content>
+      <Content title={frett.frontmatter.title} html={frett.html}></Content>
     </>
   )
 }
