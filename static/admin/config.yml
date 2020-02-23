@@ -39,6 +39,7 @@ collections:
           name: "date",
           widget: "datetime",
           dateformat: "DD.MM.YYYY",
+          hint: "Fréttir raðast eftir þessari dagsetningu, ef þú velur ekkert hér þá verður dagsetning frétt dagsetningin í dag.",
         }
       - { label: "Image", name: "image", widget: "image", required: false }
       - {
