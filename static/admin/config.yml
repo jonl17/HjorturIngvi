@@ -100,6 +100,7 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "English Title", name: "title_en", "string", required: false }
+      - { label: "Image", name: "image", widget: "image", required: false }
       - {
           label: "Content",
           name: "body",

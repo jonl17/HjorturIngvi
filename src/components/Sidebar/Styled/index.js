@@ -6,6 +6,7 @@ export const Container = styled.div`
   bottom: 0;
   box-sizing: border-box;
   padding: 0 75px 21px 75px;
+  z-index: 8;
 `
 export const Text = styled.p`
   display: flex;

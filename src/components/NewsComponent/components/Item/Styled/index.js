@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { STYLES } from "../../../../../constants"
+import Img from "gatsby-image"
 
 export const Date = styled.p`
   font-size: 14px;
@@ -20,3 +21,7 @@ export const Content = styled.div`
     font-family: "Grotesk fat";
   }
 `
+export const ImageContainer = styled.div`
+  width: 65%;
+`
+export const Image = styled(Img)``
