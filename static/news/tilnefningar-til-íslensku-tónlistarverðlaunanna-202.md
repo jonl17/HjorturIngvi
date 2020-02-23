@@ -12,5 +12,3 @@ Tilnefningar til íslensku tónlistarverðlaunanna:
 \-ENSKA-
 
 This week, the nominations for Icelandic Music Awards 2020 were announced. Hjaltalín got nominated for best song (pop, for the song Baronesse) and event of the year. Also, Bubbi Morthens got a nomination for his record, Regnbogans Stræti, on which I played keyboards.
-
->
