@@ -5,7 +5,8 @@ import { Container } from "./Styled"
 import React from "react"
 
 const CVcomponent = ({ cv }) => {
-  return <Container dangerouslySetInnerHTML={{ __html: cv.html }}></Container>
+  return <h1 className="bold">Coming soon...</h1>
+  // return <Container dangerouslySetInnerHTML={{ __html: cv.html }}></Container>
 }
 
 export default CVcomponent
