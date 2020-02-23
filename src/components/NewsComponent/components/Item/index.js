@@ -17,7 +17,9 @@ const Item = ({ frett }) => {
           ? frett.frontmatter.title_en
           : frett.frontmatter.title}
       </Title>
-      <DynamicImage image={frett.frontmatter.image}></DynamicImage>
+      {frett.frontmatter.image ? (
+        <DynamicImage image={frett.frontmatter.image}></DynamicImage>
+      ) : null}
       <Content
         htmlAst={frett.htmlAst}
         title={frett.frontmatter.title}
