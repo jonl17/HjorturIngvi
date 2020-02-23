@@ -10,5 +10,7 @@ services:
   - servicename: Youtube
     serviceurl: >-
       https://www.youtube.com/watch?v=t0yupSTohbc&list=PLSX4WSOL-O4ALdMz8Gg-mxWk6Ml-TeEBY
+  - servicename: Soundcloud
+    serviceurl: 'https://soundcloud.com/user-373345777-954802685'
 ---
 
