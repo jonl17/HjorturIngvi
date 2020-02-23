@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 import { COLORS } from "../../constants"
 
 export const Container = styled.div`
-  transition: 0.2s ease-in-out;
+  transition: 1s ease-in-out;
   opacity: 0;
   ${props =>
     props.device !== undefined &&

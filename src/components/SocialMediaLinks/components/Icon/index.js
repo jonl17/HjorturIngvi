@@ -23,7 +23,11 @@ const Icon = ({
 }) => {
   const icon = getCorrectIcon(name, icons)
   return icon ? (
-    <Img style={{ height: "20px", width: "20px" }} fluid={icon.fluid}></Img>
+    <Img
+      imgStyle={{ objectFit: "contain" }}
+      style={{ height: "1.5rem", width: "1.5rem" }}
+      fluid={icon.fluid}
+    ></Img>
   ) : (
     <></>
   )

@@ -11,6 +11,7 @@ export const Container = styled.div`
 `
 export const List = styled.div`
   padding-top: 20px;
+  height: 85%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
