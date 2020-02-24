@@ -1,7 +1,7 @@
 ---
 title: Tónleikar í Listasafni Íslands
 title_en: Concert in Listasafn Íslands
-date: 2020-02-15T13:06:47.018Z
+date: 2020-02-08T13:06:47.018Z
 image: /images/hjortur_johannsson_tix.is_800x600.jpg
 ---
 24 Myndir
