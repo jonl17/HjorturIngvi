@@ -103,5 +103,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-layout`,
+    `gatsby-plugin-react-helmet`,
   ],
 }
