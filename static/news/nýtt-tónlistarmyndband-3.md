@@ -1,7 +1,7 @@
 ---
 title: Nýtt tónlistarmyndband!
 title_en: New video!
-date: 2020-02-16T16:35:25.149Z
+date: 2021-02-14T16:35:25.149Z
 image: /images/cascade.jpg
 ---
 Loksins er komið að því - fyrsta tónlistarmyndbandið mitt er tilbúið og má finna hér: 
