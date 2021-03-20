@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Hjörtur Jóhannsson`,
     subtitle: `Pianist/Composer/Arranger`,
+    image: "./assets/images/hjortur_heimasida_1.1.png",
     pages: [
       { name: `About`, slug: `/about`, position: `header` },
       { name: `News`, slug: `/news`, position: `header` },
