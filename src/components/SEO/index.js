@@ -18,12 +18,12 @@ const SEO = ({
           projectTitle !== undefined ? projectTitle + " | " + title : title
         }
       >
-        <meta name="title" content={title}></meta>
+        <meta name="title" content={title} />
         <meta name="description" content={description} />
         {title && <meta property="og:title" content={title} />}
         <meta property="og:description" content={description} />
-        <meta property='og:image' content={image}>
-        <link rel="icon" type="image/png" href={publicURL}></link>
+        <meta property="og:image" content={image} />
+        <link rel="icon" type="image/png" href={publicURL} />
       </Helmet>
     </>
   )
