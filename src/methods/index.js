@@ -1,4 +1,3 @@
-import hastToHyperscript from "hast-to-hyperscript"
 import React from "react"
 
 export const splitTextIntoLanguage = text => {
@@ -9,8 +8,4 @@ export const splitTextIntoLanguage = text => {
   } else if (text.includes(sep2)) {
     return text.split(sep2)
   } else return text
-}
-
-export const renderHtmlToReact = node => {
-  return hastToHyperscript(React.createElement, node)
 }

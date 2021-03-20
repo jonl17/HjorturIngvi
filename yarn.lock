@@ -7635,18 +7635,6 @@ hast-to-hyperscript@^5.0.0:
     unist-util-is "^2.0.0"
     web-namespaces "^1.1.2"
 
-hast-to-hyperscript@^7.0.4:
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/hast-to-hyperscript/-/hast-to-hyperscript-7.0.4.tgz#7c4c037d9a8ea19b0a3fdb676a26448ad922353d"
-  integrity sha512-vmwriQ2H0RPS9ho4Kkbf3n3lY436QKLq6VaGA1pzBh36hBi3tm1DO9bR+kaJIbpT10UqaANDkMjxvjVfr+cnOA==
-  dependencies:
-    comma-separated-tokens "^1.0.0"
-    property-information "^5.3.0"
-    space-separated-tokens "^1.0.0"
-    style-to-object "^0.2.1"
-    unist-util-is "^3.0.0"
-    web-namespaces "^1.1.2"
-
 hast-util-embedded@^1.0.0:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/hast-util-embedded/-/hast-util-embedded-1.0.6.tgz#ea7007323351cc43e19e1d6256b7cde66ad1aa03"
@@ -12260,7 +12248,7 @@ property-information@^4.0.0:
   dependencies:
     xtend "^4.0.1"
 
-property-information@^5.0.0, property-information@^5.3.0:
+property-information@^5.0.0:
   version "5.6.0"
   resolved "https://registry.yarnpkg.com/property-information/-/property-information-5.6.0.tgz#61675545fb23002f245c6540ec46077d4da3ed69"
   integrity sha512-YUHSPk+A30YPv+0Qf8i9Mbfe/C0hdPXk1s1jPVToV8pk8BQtpw10ct89Eo7OWkutrwqvT0eicAxlOg3dOAu8JA==
