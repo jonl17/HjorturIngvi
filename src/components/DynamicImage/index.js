@@ -1,4 +1,4 @@
-import { Container, Image, Icon } from "./Styled"
+import { Container, Image, Icon, Button } from "./Styled"
 
 import React, { useState } from "react"
 import { graphql, StaticQuery } from "gatsby"
@@ -19,10 +19,9 @@ const DynamicImage = ({
     <>
       <Container width={minimized && device === "browser" ? "40%" : "100%"}>
         <Image fluid={imagesrc}></Image>
-        <Icon
-          onClick={() => setSize(minimized ? false : true)}
-          fixed={minimized ? plussrc : exsrc}
-        ></Icon>
+        <Button onClick={() => setSize(!minimized)}>
+          <Icon fixed={minimized ? plussrc : exsrc}></Icon>
+        </Button>
       </Container>
     </>
   )

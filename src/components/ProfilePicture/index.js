@@ -33,9 +33,7 @@ const ProfilePicture = ({
         }
       ></Image>
     </Container>
-  ) : (
-    <></>
-  )
+  ) : null
 }
 
 export default props => (

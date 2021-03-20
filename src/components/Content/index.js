@@ -18,7 +18,7 @@ const Content = ({ html }) => {
             ? bothLanguages[1]
             : bothLanguages[0],
       }}
-    ></Container>
+    />
   )
 }
 

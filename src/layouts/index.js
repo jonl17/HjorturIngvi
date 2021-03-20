@@ -30,7 +30,7 @@ const Layout = ({ children, location, pageContext }) => {
     return () => {
       window.removeEventListener("resize", callBack)
     }
-  })
+  }, [])
   return (
     <>
       <SEO projectTitle={pageContext.name}></SEO>
