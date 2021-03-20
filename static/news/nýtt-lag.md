@@ -25,4 +25,4 @@ However, I am glad to announce the 3. instalment of 24 pictures, titled â€œGrowâ
 
 All the best, and stay safe
 
-<https://open.spotify.com/album/67qlwg1rDaAWPci3eoKumG?si=aFqLMyEYTmOzxtoroDk-RQ>
+[Link to Spotify](https://open.spotify.com/album/67qlwg1rDaAWPci3eoKumG?si=aFqLMyEYTmOzxtoroDk-RQ)
