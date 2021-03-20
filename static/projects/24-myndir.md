@@ -7,7 +7,7 @@ Talan 24 kemur víða fyrir, bæði í tónlist og annars staðar. Það eru 24 
 
 24 myndir eru verkefni sem byggist á því að gefa út 24 lög í fyrirfram ákveðinni röð, auk þess að halda spunatónleika, þar sem stutt lög eru samin á staðnum. Nú þegar hafa 5 lög verið gefin út stafrænt, auk þess sem 2 tónleikar hafa verið haldnir, í Reykjavík og Akureyri.
 
-\-ENSKA- 
+\-ENSKA-
 
 The number 24 is omnipresent, in music and also in other places. The day has 24 hours, but we also have 24 keys, if you count major and minor. Also, composers like Bach, Chopin and Rachmaninov have written preludes (and fugues in the case of Bach) in all 24 keys. 
 

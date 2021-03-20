@@ -7,7 +7,7 @@ Tilnefningar til íslensku tónlistarverðlaunanna:
 
 Í vikunni voru tilkynntar tilnefningar til Íslensku tónlistarverðlaunanna 2020. Virkilega gaman að vera partur af þeim nokkrum: Hjaltalín var tilnefnt fyrir besta lagið í poppflokki (Baronesse) og viðburð ársins, auk þess sem Högni og Sigga fengu tilnefningu sem rödd ársins. Þá var plata Bubba (sem ég spilaði á), Regnbogans Stræti tilnefnd sem besta platan í rokki.
 
-<http://iston.is/2020/02/19/tilnefningar-til-islensku-tonlistarverdlaunanna-2020/>
+[Liston.is](http://iston.is/2020/02/19/tilnefningar-til-islensku-tonlistarverdlaunanna-2020/)
 
 \-ENSKA-
 
