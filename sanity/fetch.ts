@@ -1,5 +1,6 @@
 import "server-only";
 import { cache } from "react";
+import { publicSanityEnv } from "@/sanity/env";
 import { getReadClient } from "@/sanity/client";
 import { sanityImageUrl, scaledHeight } from "@/sanity/image";
 import type {
@@ -59,18 +60,6 @@ const newsListQuery = `*[_type == "news"] | order(date desc){
   body_en
 }`;
 
-const newsItemQuery = `*[_type == "news" && slug.current == $slug][0]{
-  title,
-  title_en,
-  "slug": slug.current,
-  date,
-  "image": image${imageProjection},
-  body_is,
-  body_en
-}`;
-
-const newsSlugsQuery = `*[_type == "news" && defined(slug.current)]{ "slug": slug.current }`;
-
 const concertListQuery = `*[_type == "concert"] | order(date asc){
   title,
   title_en,
@@ -82,29 +71,7 @@ const concertListQuery = `*[_type == "concert"] | order(date asc){
   eventLink
 }`;
 
-const concertItemQuery = `*[_type == "concert" && slug.current == $slug][0]{
-  title,
-  title_en,
-  "slug": slug.current,
-  venue,
-  date,
-  ticketsRequired,
-  buyTicketLink,
-  eventLink
-}`;
-
-const concertSlugsQuery = `*[_type == "concert" && defined(slug.current)]{ "slug": slug.current }`;
-
 const projectListQuery = `*[_type == "project"] | order(title asc){
-  title,
-  title_en,
-  "slug": slug.current,
-  "image": image${imageProjection},
-  body_is,
-  body_en
-}`;
-
-const projectItemQuery = `*[_type == "project" && slug.current == $slug][0]{
   title,
   title_en,
   "slug": slug.current,
@@ -193,6 +160,19 @@ function picture(image: ImageAsset | null | undefined, width: number): {
   };
 }
 
+const historicalProjects: ProjectItem[] = [
+  {
+    title: "24 Myndir",
+    titleEn: "24 Pictures",
+    slug: "24-myndir",
+    imageUrl: null,
+    imageWidth: 800,
+    imageHeight: 600,
+    bodyIs: [],
+    bodyEn: [],
+  },
+];
+
 const emptyShell: ShellData = {
   portraitUrl: fallbackPortrait,
   secondUrl: fallbackSecondPortrait,
@@ -256,14 +236,13 @@ export async function getNews(): Promise<NewsItem[] | null> {
 }
 
 export async function getNewsItem(slug: string): Promise<NewsItem | null> {
-  const data = await sanityFetch<RawNews | null>(newsItemQuery, "news", JSON.stringify({ slug }));
-  if (!data) return null;
-  return mapNews(data);
+  const news = await getNews();
+  return news?.find((item) => item.slug === slug) ?? null;
 }
 
 export async function getNewsSlugs(): Promise<string[]> {
-  const data = await sanityFetch<Array<{ slug?: string | null }> | null>(newsSlugsQuery, "news");
-  return data?.flatMap((item) => (item.slug ? [item.slug] : [])) ?? [];
+  const news = await getNews();
+  return news?.map((item) => item.slug) ?? [];
 }
 
 function mapConcert(item: RawConcert): ConcertItem | null {
@@ -290,14 +269,13 @@ export async function getConcerts(): Promise<ConcertItem[] | null> {
 }
 
 export async function getConcert(slug: string): Promise<ConcertItem | null> {
-  const data = await sanityFetch<RawConcert | null>(concertItemQuery, "concert", JSON.stringify({ slug }));
-  if (!data) return null;
-  return mapConcert(data);
+  const concerts = await getConcerts();
+  return concerts?.find((item) => item.slug === slug) ?? null;
 }
 
 export async function getConcertSlugs(): Promise<string[]> {
-  const data = await sanityFetch<Array<{ slug?: string | null }> | null>(concertSlugsQuery, "concert");
-  return data?.flatMap((item) => (item.slug ? [item.slug] : [])) ?? [];
+  const concerts = await getConcerts();
+  return concerts?.map((item) => item.slug) ?? [];
 }
 
 function mapProject(item: RawProject): ProjectItem | null {
@@ -316,6 +294,7 @@ function mapProject(item: RawProject): ProjectItem | null {
 }
 
 export async function getProjects(): Promise<ProjectItem[] | null> {
+  if (!publicSanityEnv().configured) return historicalProjects;
   const data = await sanityFetch<RawProject[] | null>(projectListQuery, "project");
   if (!data) return null;
   return data.flatMap((item) => {
@@ -325,9 +304,8 @@ export async function getProjects(): Promise<ProjectItem[] | null> {
 }
 
 export async function getProject(slug: string): Promise<ProjectItem | null> {
-  const data = await sanityFetch<RawProject | null>(projectItemQuery, "project", JSON.stringify({ slug }));
-  if (!data) return null;
-  return mapProject(data);
+  const projects = await getProjects();
+  return projects?.find((item) => item.slug === slug) ?? null;
 }
 
 export async function getContact(): Promise<ContactDocument | null> {

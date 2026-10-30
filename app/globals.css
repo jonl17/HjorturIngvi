@@ -306,6 +306,7 @@ button:focus-visible {
 .rich {
   line-height: var(--line);
   padding-bottom: 15px;
+  overflow-wrap: anywhere;
 }
 
 .rich p {
@@ -341,6 +342,7 @@ button:focus-visible {
 
 .news-title {
   font-size: 22px;
+  overflow-wrap: anywhere;
 }
 
 .figure {
@@ -436,6 +438,7 @@ button:focus-visible {
 
 .detail-title {
   margin-top: 5px;
+  overflow-wrap: anywhere;
 }
 
 .cv ul {

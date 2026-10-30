@@ -35,6 +35,7 @@ const expected = [
 
 const excludedFile = "chopin-nocturne-op.55-no.1-by-arthur-rubinstein-15154-.mp3";
 const icelandicLetters = "áéíóúýþæöðÁÉÍÓÚÝÞÆÖÐ";
+const sourceCommit = "18d7220ba572762e4d7f8ee77fb0d2ecd426f67a";
 
 interface Span {
   _type: "span";
@@ -99,7 +100,7 @@ function materialiseSource(): { staticDir: string; cleanup: () => void } {
   }
   const dir = mkdtempSync(path.join(tmpdir(), "hjortur-source-"));
   const archivePath = path.join(dir, "static.tar");
-  execFileSync("git", ["archive", `--output=${archivePath}`, "master", "static"], { cwd: repoRoot() });
+  execFileSync("git", ["archive", `--output=${archivePath}`, sourceCommit, "static"], { cwd: repoRoot() });
   execFileSync("tar", ["-xf", archivePath, "-C", dir]);
   return {
     staticDir: path.join(dir, "static"),
@@ -290,8 +291,9 @@ function checkBody(label: string, markdown: string, blocks: Block[]) {
 
 function documentId(type: string, slug?: string): string {
   if (!slug) return type;
-  if (/^[a-z0-9-]+$/.test(slug)) return `${type}.${slug}`;
-  return `${type}.${createHash("sha1").update(slug.normalize("NFC")).digest("hex").slice(0, 16)}`;
+  // A dot marks a private Sanity id, which a tokenless public read cannot see.
+  if (/^[A-Za-z0-9_-]+$/.test(slug)) return `${type}-${slug}`;
+  return `${type}-${createHash("sha1").update(slug.normalize("NFC")).digest("hex").slice(0, 16)}`;
 }
 
 function referenceName(value: string): string {
@@ -522,7 +524,7 @@ async function run(staticDir: string) {
   const countLine = expected.map(([type]) => counts.get(type) ?? 0).join("/");
 
   console.log(dryRun ? "migrate-from-markdown: dry run" : "migrate-from-markdown: write");
-  console.log(sourceArg ? `source: ${sourceArg}` : "source: git archive master static");
+  console.log(sourceArg ? `source: ${sourceArg}` : `source: git archive ${sourceCommit} static`);
   console.log(dryRun ? "nothing will be written" : "writing documents");
   console.log("");
   console.log("counts");
@@ -533,6 +535,12 @@ async function run(staticDir: string) {
   }
   console.log(`expected 1/13/5/1/1/1/1`);
   console.log(`actual   ${countLine}`);
+  console.log("");
+  console.log(`document ids (${documents.length})`);
+  for (const document of documents) {
+    console.log(`  ${document._id}`);
+    if (document._id.includes(".")) fail(`id contains a dot: ${document._id}`);
+  }
   console.log("");
   console.log(`non-ASCII slugs (${nonAscii.length})`);
   for (const row of nonAscii) console.log(`  ${row.type} ${row.slug}  _id ${row.id}`);
