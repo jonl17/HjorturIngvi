@@ -35,4 +35,7 @@ export const siteLinks = defineType({
       ],
     }),
   ],
+  preview: {
+    prepare: () => ({ title: "Tenglar", subtitle: "External links" }),
+  },
 });
